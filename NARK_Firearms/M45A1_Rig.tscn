@@ -9689,7 +9689,7 @@ bone_name = "Colt_1911_Origin"
 bone_idx = 1
 
 [node name="Rider" parent="Handling/Sway/Noise/Tilt/Impulse/Recoil/Holder/Colt_1911/Armature/Skeleton3D/Attachments" unique_id=565213979 instance=ExtResource("12")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.148)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0009428, 0.146)
 visible = false
 
 [node name="Ammo_Chamber" type="BoneAttachment3D" parent="Handling/Sway/Noise/Tilt/Impulse/Recoil/Holder/Colt_1911/Armature/Skeleton3D" unique_id=810233631]

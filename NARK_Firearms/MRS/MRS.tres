@@ -1,0 +1,120 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Resource" path="res://Items/Ammo/Ammo_223/Ammo_223.tres" id="1"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/KAR-21/KAR-21_Magazine_Check.tres" id="2"]
+[ext_resource type="Resource" path="res://NARK_Firearms/MRS/MRS_Magazine.tres" id="3"]
+[ext_resource type="Resource" path="res://Items/Attachments/ACOG/ACOG.tres" id="4"]
+[ext_resource type="Resource" path="res://Items/Attachments/EXPS/EXPS.tres" id="5"]
+[ext_resource type="Resource" path="res://Items/Attachments/HMR/HMR.tres" id="6"]
+[ext_resource type="Resource" path="res://Items/Attachments/Hybrid/Hybrid.tres" id="7"]
+[ext_resource type="Resource" path="res://Items/Attachments/Kobra/Kobra.tres" id="8"]
+[ext_resource type="Resource" path="res://Items/Attachments/Leopard/Leopard.tres" id="9"]
+[ext_resource type="Resource" path="res://Items/Attachments/Micro/Micro.tres" id="10"]
+[ext_resource type="Resource" path="res://Items/Attachments/Monster/Monster.tres" id="11"]
+[ext_resource type="Resource" path="res://Items/Attachments/MRO/MRO.tres" id="12"]
+[ext_resource type="Resource" path="res://Items/Attachments/OZ5/OZ5.tres" id="13"]
+[ext_resource type="Resource" path="res://Items/Attachments/PRO/PRO.tres" id="14"]
+[ext_resource type="Resource" path="res://Items/Attachments/SOCOM/SOCOM.tres" id="15"]
+[ext_resource type="Resource" path="res://Items/Attachments/Thor/Thor.tres" id="16"]
+[ext_resource type="Resource" path="res://Items/Attachments/Vudu/Vudu.tres" id="17"]
+[ext_resource type="Resource" path="res://Items/Attachments/ANPEQ/ANPEQ.tres" id="18"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/KAR-21/KAR-21_223_Fire_Auto.tres" id="19"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/KAR-21/KAR-21_223_Fire_Semi.tres" id="20"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/KAR-21/KAR-21_223_Fire_Suppressed.tres" id="21"]
+[ext_resource type="Texture2D" path="res://NARK_Firearms/MRS/Assets/Icon.res" id="22"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/KAR-21/KAR-21_Magazine_Attach_Empty.tres" id="23"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/KAR-21/KAR-21_Magazine_Attach_Tactical.tres" id="24"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/KAR-21/KAR-21_Magazine_Detach.tres" id="25"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/KAR-21/KAR-21_Reload_Empty.tres" id="26"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/KAR-21/KAR-21_Reload_Tactical.tres" id="27"]
+[ext_resource type="Script" path="res://Scripts/WeaponData.gd" id="28"]
+[ext_resource type="Resource" path="res://Audio/Effects/Tails/Tail_Rifle_Indoor.tres" id="29"]
+[ext_resource type="Resource" path="res://Audio/Effects/Tails/Tail_Rifle_Indoor_SD.tres" id="30"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/KAR-21/KAR-21_223_Tail_Outdoor.tres" id="31"]
+[ext_resource type="Resource" path="res://Audio/Effects/Tails/Tail_Rifle_Outdoor_SD.tres" id="32"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/MRS/MRS_6x2.tscn" id="33"]
+
+[resource]
+script = ExtResource("28")
+weaponType = "Rifle"
+weaponAction = "Semi-Auto"
+fireSemi = ExtResource("20")
+fireAuto = ExtResource("19")
+fireSuppressed = ExtResource("21")
+reloadEmpty = ExtResource("26")
+reloadTactical = ExtResource("27")
+magazineAttachEmpty = ExtResource("23")
+magazineAttachTactical = ExtResource("24")
+magazineDetach = ExtResource("25")
+ammoCheck = ExtResource("2")
+tailOutdoor = ExtResource("31")
+reload = null
+insertStart = null
+insertEnd = null
+insert = null
+tailIndoor = ExtResource("29")
+tailIndoorSuppressed = ExtResource("30")
+tailOutdoorSuppressed = ExtResource("32")
+ammo = ExtResource("1")
+caliber = ".223"
+casing = 2
+damage = 40.0
+penetration = 3
+fireRate = 0.10
+magazineSize = 30
+kick = 0.045
+kickPower = 20.0
+kickRecovery = 24.0
+verticalRecoil = 0.04
+horizontalRecoil = 0.006
+rotationPower = 20.0
+rotationRecovery = 24.0
+slideMovement = -0.1
+slideSpeed = 2.0
+slideLock = true
+selectorDirection = 2
+selectorRotation = Vector2(-40, -140)
+lowPosition = Vector3(0.02, -0.12, -0.2)
+lowRotation = Vector3(15, 20, 0)
+highPosition = Vector3(0.05, -0.075, -0.18)
+aimPosition = Vector3(0, -0.05, -0.17)
+cantedPosition = Vector3(0, -0.075, -0.15)
+cantedRotation = Vector3(0, 0, -45)
+inspectPosition = Vector3(0.05, -0.06, -0.2)
+inspectRotation = Vector3(-6, 5, -2.5)
+collisionPosition = Vector3(0.03, -0.15, -0.12)
+collisionRotation = Vector3(45, 15, 0)
+file = "NARK_MRS"
+name = "MRS Ocelot"
+inventory = "MRS"
+rotated = "MRS"
+equipment = "MRS"
+display = "MRS"
+type = "Weapon"
+subtype = "Rifle"
+weight = 3.3
+value = 4250
+rarity = 0
+icon = ExtResource("22")
+tetris = ExtResource("33")
+size = Vector2(5, 2)
+magazineOffset = 5.0
+opticOffset = -10.0
+suppressorScale = 0.45
+suppressorOffset = -15.0
+magazineSuppressorScale = 0.45
+magazineSuppressorOffset = Vector2(-15, 5)
+opticSuppressorScale = 0.45
+opticSuppressorOffset = Vector2(-15, -5)
+fullyModdedScale = 0.45
+fullyModdedOffset = Vector2(-15, 0)
+audio = null
+compatible = [ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("10"), ExtResource("11"), ExtResource("12"), ExtResource("13"), ExtResource("14"), ExtResource("15"), ExtResource("16"), ExtResource("17"), ExtResource("18")]
+slots = ["Primary"]
+material = null
+showCondition = true
+repairs = true
+military = true
+gunsmith = true
+orientation = 90.0
+wallOffset = 0.04

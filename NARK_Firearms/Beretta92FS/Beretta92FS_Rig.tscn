@@ -9204,7 +9204,7 @@ bone_name = "HP-DA_Origin"
 bone_idx = 48
 
 [node name="Rider" parent="Handling/Sway/Noise/Tilt/Impulse/Recoil/Holder/HP-DA/Armature/Skeleton3D/Attachments" instance=ExtResource("13")]
-transform = Transform3D(1, -6.93889e-18, -5.68434e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0.145)
+transform = Transform3D(1, -6.93889e-18, -5.68434e-14, 0, 1, 0, 0, 0, 1, 0, 0.00131, 0.145)
 visible = false
 
 [node name="Ammo_Chamber" type="BoneAttachment3D" parent="Handling/Sway/Noise/Tilt/Impulse/Recoil/Holder/HP-DA/Armature/Skeleton3D"]

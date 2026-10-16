@@ -51,7 +51,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07, -0.01)
 visible = false
 
 [node name="Rider" parent="Attachments" instance=ExtResource("9")]
-transform = Transform3D(1, -6.93889e-18, -5.68434e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0.145)
+transform = Transform3D(1, -6.93889e-18, -5.68434e-14, 0, 1, 0, 0, 0, 1, 0, 0.0013313, 0.145)
 visible = false
 
 [node name="Muzzle" type="Node3D" parent="."]

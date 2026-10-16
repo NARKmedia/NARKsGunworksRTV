@@ -20,7 +20,7 @@ func _ready():
 	if lib.has_signal("frameworks_ready") and lib.get("_is_ready") == false:
 		await lib.frameworks_ready
 	_lib = lib
-	for entry in [["Assets/MT_M45A1", "Assets/Albedo", "Assets/Normal"], ["Assets/MT_NDm", "Assets/NDm_Albedo", "Assets/NDm_Normal"], ["Beretta92FS/Assets/MT_Beretta", "Beretta92FS/Assets/Albedo", "Beretta92FS/Assets/Normal"]]:
+	for entry in [["Assets/MT_M45A1", "Assets/Albedo", "Assets/Normal"], ["Assets/MT_NDm", "Assets/NDm_Albedo", "Assets/NDm_Normal"], ["Beretta92FS/Assets/MT_Beretta", "Beretta92FS/Assets/Albedo", "Beretta92FS/Assets/Normal"], ["MRS/Assets/MT_MRS", "MRS/Assets/Albedo", "MRS/Assets/Normal"]]:
 		var material = load("res://NARK_Firearms/" + entry[0] + ".tres") as ShaderMaterial
 		var albedo = load_texture("res://NARK_Firearms/" + entry[1] + ".png", false)
 		var normal = load_texture("res://NARK_Firearms/" + entry[2] + ".png", true)
@@ -29,7 +29,7 @@ func _ready():
 		material.set_shader_parameter("albedo", albedo)
 		material.set_shader_parameter("normal", normal)
 		_materials.append(material)
-	for entry in [["NARK_M45A1_Magazine", "M45A1_Magazine"], ["NARK_NDm_Laser", "NDm"], ["NARK_M45A1", "M45A1"], ["NARK_Beretta92FS_Magazine", "Beretta92FS/Beretta92FS_Magazine"], ["NARK_Beretta92FS", "Beretta92FS/Beretta92FS"]]:
+	for entry in [["NARK_M45A1_Magazine", "M45A1_Magazine"], ["NARK_NDm_Laser", "NDm"], ["NARK_M45A1", "M45A1"], ["NARK_Beretta92FS_Magazine", "Beretta92FS/Beretta92FS_Magazine"], ["NARK_Beretta92FS", "Beretta92FS/Beretta92FS"], ["NARK_MRS_Magazine", "MRS/MRS_Magazine"], ["NARK_MRS", "MRS/MRS"]]:
 		var item = load("res://NARK_Firearms/" + entry[1] + ".tres")
 		var world = load("res://NARK_Firearms/" + entry[1] + ".tscn")
 		if item == null or world == null:
@@ -43,6 +43,9 @@ func _ready():
 	var beretta_rig = load("res://NARK_Firearms/Beretta92FS/Beretta92FS_Rig.tscn")
 	if beretta_rig != null:
 		lib.register("scenes", "NARK_Beretta92FS_Rig", beretta_rig)
+	var mrs_rig = load("res://NARK_Firearms/MRS/MRS_Rig.tscn")
+	if mrs_rig != null:
+		lib.register("scenes", "NARK_MRS_Rig", mrs_rig)
 	configure_magazines()
 
 func _exit_tree():

@@ -1,0 +1,134 @@
+[gd_scene format=3]
+
+[ext_resource type="PhysicsMaterial" path="res://Items/Physics/Item_Physics.tres" id="1"]
+[ext_resource type="Script" path="res://Scripts/Pickup.gd" id="2"]
+[ext_resource type="Resource" path="res://NARK_Firearms/MRS/MRS.tres" id="3"]
+[ext_resource type="Script" path="res://Scripts/SlotData.gd" id="4"]
+[ext_resource type="ArrayMesh" path="res://NARK_Firearms/MRS/Assets/Weapon_World.mesh" id="5"]
+[ext_resource type="Material" path="res://NARK_Firearms/MRS/Assets/MT_MRS.tres" id="6"]
+[ext_resource type="ArrayMesh" path="res://NARK_Firearms/MRS/Assets/Weapon_World.mesh" id="7"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/ACOG/ACOG_Static.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/EXPS/EXPS_Static.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/HMR/HMR_Static.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Hybrid/Hybrid_Static.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/MRS/MRS_Magazine_Static.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Kobra/Kobra_Static.tscn" id="13"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Leopard/Leopard_Static.tscn" id="14"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Micro/Micro_Static.tscn" id="15"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Micro/Micro_Mount_High.tscn" id="16"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Monster/Monster_Static.tscn" id="17"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/MRO/MRO_Static.tscn" id="18"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/MRO/MRO_Mount_High.tscn" id="19"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/OZ5/OZ5_Static.tscn" id="20"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/PRO/PRO_Static.tscn" id="21"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/SOCOM/SOCOM_Static.tscn" id="22"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Thor/Thor_Static.tscn" id="23"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Vudu/Vudu_Static.tscn" id="24"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/ANPEQ/ANPEQ_Static.tscn" id="25"]
+
+[sub_resource type="Resource" id="Resource_rjvva"]
+script = ExtResource("4")
+resource_local_to_scene = true
+itemData = ExtResource("3")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yaep2"]
+size = Vector3(0.078, 0.23, 0.69)
+
+[node name="NARK_MRS" type="RigidBody3D" node_paths=PackedStringArray("mesh", "collision") groups=["Item"]]
+collision_layer = 4
+collision_mask = 29
+physics_material_override = ExtResource("1")
+script = ExtResource("2")
+slotData = SubResource("Resource_rjvva")
+mesh = NodePath("LOD0")
+collision = NodePath("Collision")
+
+[node name="LOD0" type="MeshInstance3D" parent="."]
+layers = 4
+visibility_range_end = 10.0
+mesh = ExtResource("5")
+surface_material_override/0 = ExtResource("6")
+
+[node name="LOD1" type="MeshInstance3D" parent="."]
+layers = 4
+visibility_range_begin = 9.0
+visibility_range_end = 50.0
+mesh = ExtResource("7")
+surface_material_override/0 = ExtResource("6")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.066, 0.0488)
+shape = SubResource("BoxShape3D_yaep2")
+
+[node name="Attachments" type="Node3D" parent="."]
+
+[node name="ACOG" parent="Attachments" instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.077, 0.0804136)
+visible = false
+
+[node name="EXPS" parent="Attachments" instance=ExtResource("9")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.077, 0.05)
+visible = false
+
+[node name="HMR" parent="Attachments" instance=ExtResource("10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.078, 0.05)
+visible = false
+
+[node name="Hybrid" parent="Attachments" instance=ExtResource("11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.34381510000000004)
+visible = false
+
+[node name="NARK_MRS_Magazine" parent="Attachments" instance=ExtResource("12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.115, 0.114)
+visible = false
+
+[node name="Kobra" parent="Attachments" instance=ExtResource("13")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0.05)
+visible = false
+
+[node name="Leopard" parent="Attachments" instance=ExtResource("14")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0.08, 0.09)
+visible = false
+
+[node name="Micro" parent="Attachments" instance=ExtResource("15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0.06)
+visible = false
+
+[node name="Micro_Mount_High" parent="Attachments/Micro" instance=ExtResource("16")]
+
+[node name="Monster" parent="Attachments" instance=ExtResource("17")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.34385010000000005)
+visible = false
+
+[node name="MRO" parent="Attachments" instance=ExtResource("18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0.08)
+visible = false
+
+[node name="MRO_Mount_High" parent="Attachments/MRO" instance=ExtResource("19")]
+
+[node name="OZ5" parent="Attachments" instance=ExtResource("20")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.04, 0, 0.350254)
+visible = false
+
+[node name="PRO" parent="Attachments" instance=ExtResource("21")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0.05)
+visible = false
+
+[node name="SOCOM" parent="Attachments" instance=ExtResource("22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.34381510000000004)
+visible = false
+
+[node name="Thor" parent="Attachments" instance=ExtResource("23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.34381510000000004)
+visible = false
+
+[node name="Vudu" parent="Attachments" instance=ExtResource("24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0.06)
+visible = false
+
+[node name="ANPEQ" parent="Attachments" instance=ExtResource("25")]
+transform = Transform3D(1.31134e-07, -1, 0, 1, 1.31134e-07, 0, 0, 0, 1, -0.035, 0.005, 0.335000)
+visible = false
+
+[node name="Muzzle" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3938151)

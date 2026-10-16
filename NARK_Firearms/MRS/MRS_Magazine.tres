@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Resource" path="res://Items/Ammo/Ammo_223/Ammo_223.tres" id="1"]
+[ext_resource type="Texture2D" path="res://NARK_Firearms/MRS/Assets/Magazine_Icon.res" id="2"]
+[ext_resource type="Script" path="res://Scripts/ItemData.gd" id="3"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/MRS/MRS_Magazine_1x2.tscn" id="4"]
+
+[resource]
+script = ExtResource("3")
+file = "NARK_MRS_Magazine"
+name = "MRS Magazine"
+inventory = "Mag."
+rotated = "Mag."
+equipment = "Mag."
+display = "Mag."
+type = "Attachment"
+subtype = "Magazine"
+weight = 0.2
+value = 175
+rarity = 0
+icon = ExtResource("2")
+tetris = ExtResource("4")
+size = Vector2(1, 2)
+audio = null
+compatible = [ExtResource("1")]
+material = null
+showAmount = true
+defaultAmount = 30
+maxAmount = 30
+military = true
+gunsmith = true
+orientation = 90.0
+wallOffset = 0.03
