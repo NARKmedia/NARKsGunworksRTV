@@ -1,0 +1,64 @@
+[gd_scene format=3]
+
+[ext_resource type="PhysicsMaterial" path="res://Items/Physics/Item_Physics.tres" id="1"]
+[ext_resource type="Script" path="res://Scripts/Pickup.gd" id="2"]
+[ext_resource type="Resource" path="res://NARK_Firearms/M45A1.tres" id="3"]
+[ext_resource type="Script" path="res://Scripts/SlotData.gd" id="4"]
+[ext_resource type="ArrayMesh" path="res://NARK_Firearms/Assets/Weapon_World.mesh" id="5"]
+[ext_resource type="Material" path="res://NARK_Firearms/Assets/MT_M45A1.tres" id="6"]
+[ext_resource type="ArrayMesh" path="res://NARK_Firearms/Assets/Weapon_World.mesh" id="7"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/M45A1_Magazine_Static.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Rider/Rider_Static.tscn" id="9"]
+
+[ext_resource type="PackedScene" path="res://NARK_Firearms/NDm_Static.tscn" id="ndm"]
+
+[sub_resource type="Resource" id="Resource_gmkna"]
+script = ExtResource("4")
+resource_local_to_scene = true
+itemData = ExtResource("3")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yaep2"]
+size = Vector3(0.03, 0.13, 0.22)
+
+[node name="NARK_M45A1" type="RigidBody3D" unique_id=1035028565 node_paths=PackedStringArray("mesh", "collision") groups=["Item"]]
+collision_layer = 4
+collision_mask = 29
+physics_material_override = ExtResource("1")
+script = ExtResource("2")
+slotData = SubResource("Resource_gmkna")
+mesh = NodePath("LOD0")
+collision = NodePath("Collision")
+
+[node name="LOD0" type="MeshInstance3D" parent="." unique_id=1281856514]
+layers = 4
+visibility_range_end = 10.0
+mesh = ExtResource("5")
+surface_material_override/0 = ExtResource("6")
+
+[node name="LOD1" type="MeshInstance3D" parent="." unique_id=1027170124]
+layers = 4
+visibility_range_begin = 9.0
+visibility_range_end = 25.0
+mesh = ExtResource("7")
+surface_material_override/0 = ExtResource("6")
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=522836755]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0.04)
+shape = SubResource("BoxShape3D_yaep2")
+
+[node name="Attachments" type="Node3D" parent="." unique_id=214570505]
+
+[node name="NARK_M45A1_Magazine" parent="Attachments" unique_id=1231204584 instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.065, -0.02)
+visible = false
+
+[node name="Rider" parent="Attachments" unique_id=1755704888 instance=ExtResource("9")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.148)
+visible = false
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=368126457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.149881)
+
+[node name="NARK_NDm_Laser" parent="Attachments" instance=ExtResource("ndm")]
+position = Vector3(0.000276790000498, -0.0330023765564, 0.0869131162763)
+visible = false

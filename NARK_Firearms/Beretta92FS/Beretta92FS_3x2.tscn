@@ -1,0 +1,25 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://UI/Effects/MT_Item.tres" id="1"]
+[ext_resource type="Texture2D" path="res://NARK_Firearms/Beretta92FS/Assets/Icon.res" id="2"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/Beretta92FS/Beretta92FS_Magazine_1x1.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Rider/Rider_2x1.tscn" id="4"]
+
+[node name="NARK_Beretta92FS" type="Sprite2D"]
+material = ExtResource("1")
+position = Vector2(96, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2")
+
+[node name="NARK_Beretta92FS_Magazine" parent="." instance=ExtResource("3")]
+visible = false
+show_behind_parent = true
+position = Vector2(-74.00001, 18)
+scale = Vector2(1.4, 1.4)
+
+[node name="Rider" parent="." instance=ExtResource("4")]
+visible = false
+show_behind_parent = true
+position = Vector2(234, -72)
+scale = Vector2(1, 1)
+

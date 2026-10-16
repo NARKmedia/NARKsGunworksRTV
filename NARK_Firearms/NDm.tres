@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="AttachmentData" format=3]
+
+[ext_resource type="Texture2D" path="res://NARK_Firearms/Assets/NDm_Icon.res" id="1"]
+[ext_resource type="Script" path="res://Scripts/AttachmentData.gd" id="2"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/NDm_1x1.tscn" id="3"]
+
+[resource]
+script = ExtResource("2")
+file = "NARK_NDm_Laser"
+name = "NDm Laser"
+inventory = "NDm Laser"
+rotated = "NDm Laser"
+equipment = "NDm Laser"
+display = "NDm Laser"
+type = "Attachment"
+subtype = "Laser"
+weight = 0.2
+value = 1720
+rarity = 0
+icon = ExtResource("1")
+tetris = ExtResource("3")
+audio = null
+material = null
+military = true
+orientation = 90.0
+wallOffset = 0.04
+gunsmith = true

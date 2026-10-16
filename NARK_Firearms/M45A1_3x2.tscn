@@ -1,0 +1,31 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://UI/Effects/MT_Item.tres" id="1"]
+[ext_resource type="Texture2D" path="res://NARK_Firearms/Assets/Icon.res" id="2"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/M45A1_Magazine_1x1.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Rider/Rider_2x1.tscn" id="4"]
+
+[ext_resource type="PackedScene" path="res://NARK_Firearms/NDm_1x1.tscn" id="ndm"]
+
+[node name="NARK_M45A1" type="Sprite2D" unique_id=278427551]
+material = ExtResource("1")
+position = Vector2(96, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2")
+
+[node name="NARK_M45A1_Magazine" parent="." unique_id=2134268665 instance=ExtResource("3")]
+visible = false
+show_behind_parent = true
+position = Vector2(-74, 14)
+scale = Vector2(1.2, 1.2)
+
+[node name="Rider" parent="." unique_id=407299868 instance=ExtResource("4")]
+visible = false
+show_behind_parent = true
+position = Vector2(217, -67)
+scale = Vector2(0.8, 0.8)
+
+[node name="NARK_NDm_Laser" parent="." instance=ExtResource("ndm")]
+visible = false
+position = Vector2(58, -30)
+scale = Vector2(0.6, 0.6)

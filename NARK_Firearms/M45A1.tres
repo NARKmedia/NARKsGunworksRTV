@@ -1,0 +1,103 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Resource" path="res://Items/Ammo/Ammo_45ACP/Ammo_45ACP.tres" id="1"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/Colt_1911/Colt_1911_Magazine_Check.tres" id="2"]
+[ext_resource type="Resource" path="res://NARK_Firearms/M45A1_Magazine.tres" id="3"]
+[ext_resource type="Resource" path="res://Items/Attachments/Rider/Rider.tres" id="4"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/Colt_1911/Colt_1911_Fire.tres" id="5"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/Colt_1911/Colt_1911_Fire_Suppressed.tres" id="6"]
+[ext_resource type="Texture2D" path="res://NARK_Firearms/Assets/Icon.res" id="7"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/Colt_1911/Colt_1911_Magazine_Attach_Empty.tres" id="8"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/Colt_1911/Colt_1911_Magazine_Attach_Tactical.tres" id="9"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/Colt_1911/Colt_1911_Magazine_Detach.tres" id="10"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/Colt_1911/Colt_1911_Reload_Empty.tres" id="11"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/Colt_1911/Colt_1911_Reload_Tactical.tres" id="12"]
+[ext_resource type="Script" path="res://Scripts/WeaponData.gd" id="13"]
+[ext_resource type="Resource" path="res://Audio/Effects/Tails/Tail_Pistol_Indoor.tres" id="14"]
+[ext_resource type="Resource" path="res://Audio/Effects/Tails/Tail_Pistol_Indoor_SD.tres" id="15"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/Colt_1911/Colt_1911_Tail_Outdoor.tres" id="16"]
+[ext_resource type="Resource" path="res://Audio/Effects/Tails/Tail_Pistol_Outdoor_SD.tres" id="17"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/M45A1_3x2.tscn" id="18"]
+
+[ext_resource type="Resource" path="res://NARK_Firearms/NDm.tres" id="ndm"]
+
+[resource]
+script = ExtResource("13")
+weaponType = "Pistol"
+weaponAction = "Semi"
+fireSemi = ExtResource("5")
+fireAuto = null
+fireSuppressed = ExtResource("6")
+reloadEmpty = ExtResource("11")
+reloadTactical = ExtResource("12")
+magazineAttachEmpty = ExtResource("8")
+magazineAttachTactical = ExtResource("9")
+magazineDetach = ExtResource("10")
+ammoCheck = ExtResource("2")
+tailOutdoor = ExtResource("16")
+reload = null
+insertStart = null
+insertEnd = null
+insert = null
+tailIndoor = ExtResource("14")
+tailIndoorSuppressed = ExtResource("15")
+tailOutdoorSuppressed = ExtResource("17")
+ammo = ExtResource("1")
+caliber = ".45 ACP"
+casing = 1
+damage = 25.0
+penetration = 1
+fireRate = 0.08
+magazineSize = 8
+kick = 0.05
+kickPower = 20.0
+kickRecovery = 20.0
+verticalRecoil = 0.25
+horizontalRecoil = 0.02
+rotationPower = 20.0
+rotationRecovery = 20.0
+slideDirection = 2
+slideMovement = -0.04
+slideSpeed = 2.0
+slideLock = true
+lowPosition = Vector3(0.02, -0.1, -0.25)
+lowRotation = Vector3(15, 20, 0)
+highPosition = Vector3(0.05, -0.05, -0.3)
+aimPosition = Vector3(0, -0.014, -0.27)
+cantedPosition = Vector3(0, -0.05, -0.22)
+cantedRotation = Vector3(0, 0, -45)
+inspectPosition = Vector3(-0.01, -0.04, -0.25)
+inspectRotation = Vector3(0, 0, 10)
+collisionPosition = Vector3(0.03, -0.125, -0.225)
+collisionRotation = Vector3(35, 15, 0)
+file = "NARK_M45A1"
+name = "M45A1"
+inventory = "M45A1"
+rotated = "M45A1"
+equipment = "M45A1"
+display = "M45A1"
+type = "Weapon"
+subtype = "Pistol"
+weight = 1.1
+value = 825
+icon = ExtResource("7")
+tetris = ExtResource("18")
+size = Vector2(3, 2)
+suppressorScale = 0.4
+suppressorOffset = -30.0
+magazineSuppressorScale = 0.4
+magazineSuppressorOffset = Vector2(-30, 0)
+audio = null
+compatible = [ExtResource("3"), ExtResource("4"), ExtResource("ndm")]
+slots = ["Primary", "Secondary"]
+material = null
+showCondition = true
+repairs = true
+civilian = false
+military = true
+generalist = false
+gunsmith = true
+hunter = false
+orientation = 90.0
+wallOffset = 0.02
+rarity = 0

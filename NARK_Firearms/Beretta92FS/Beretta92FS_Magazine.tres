@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Resource" path="res://Items/Ammo/Ammo_9x19/Ammo_9x19.tres" id="1"]
+[ext_resource type="Texture2D" path="res://NARK_Firearms/Beretta92FS/Assets/Magazine_Icon.res" id="2"]
+[ext_resource type="Script" path="res://Scripts/ItemData.gd" id="3"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/Beretta92FS/Beretta92FS_Magazine_1x1.tscn" id="4"]
+
+[resource]
+script = ExtResource("3")
+file = "NARK_Beretta92FS_Magazine"
+name = "Beretta 92FS Magazine"
+inventory = "Mag."
+rotated = "Mag."
+equipment = "Mag."
+display = "Mag."
+type = "Attachment"
+subtype = "Magazine"
+weight = 0.1
+value = 85
+icon = ExtResource("2")
+tetris = ExtResource("4")
+audio = null
+compatible = [ExtResource("1")]
+material = null
+showAmount = true
+defaultAmount = 15
+maxAmount = 15
+civilian = true
+military = true
+gunsmith = true
+hunter = false
+orientation = 90.0
+wallOffset = 0.02
+rarity = 0
+industrial = false
+generalist = true
+doctor = false
+driver = false
+grandma = false

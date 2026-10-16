@@ -1,0 +1,12 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://NARK_Firearms/Assets/NDm.mesh" id="1"]
+[ext_resource type="Material" path="res://NARK_Firearms/Assets/MT_NDm.tres" id="2"]
+
+[node name="NARK_NDm_Laser" type="Node3D"]
+
+[node name="LOD0" type="MeshInstance3D" parent="."]
+layers = 4
+visibility_range_end = 25.0
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("2")

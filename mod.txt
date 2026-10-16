@@ -1,0 +1,19 @@
+[mod]
+id="nark_firearms"
+name="NARK's Gunworks"
+version="0.1.1"
+author="NARK"
+description="Adds the M45A1, Beretta 92FS, magazines and NDm Laser using vanilla weapon animations and sounds."
+priority=970
+replace_files=false
+
+[autoload]
+NARK_Firearms="res://NARK_Firearms/Main.gd"
+
+[hooks]
+res://Scripts/Item.gd="Initialize"
+res://Scripts/Pickup.gd="UpdateAttachments"
+
+res://Scripts/WeaponRig.gd="_ready,Magazine,PlayMagazineAttachEmpty,PlayMagazineAttachTactical,UpdateBullets"
+
+[registry]

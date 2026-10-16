@@ -1,0 +1,111 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Resource" path="res://Items/Ammo/Ammo_9x19/Ammo_9x19.tres" id="1"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/HP-DA/HP-DA_Magazine_Check.tres" id="2"]
+[ext_resource type="Resource" path="res://NARK_Firearms/Beretta92FS/Beretta92FS_Magazine.tres" id="3"]
+[ext_resource type="Resource" path="res://Items/Attachments/Rider/Rider.tres" id="4"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/HP-DA/HP-DA_Fire.tres" id="7"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/HP-DA/HP-DA_Fire_Suppressed.tres" id="8"]
+[ext_resource type="Texture2D" path="res://NARK_Firearms/Beretta92FS/Assets/Icon.res" id="9"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/HP-DA/HP-DA_Magazine_Attach_Empty.tres" id="10"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/HP-DA/HP-DA_Magazine_Attach_Tactical.tres" id="11"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/HP-DA/HP-DA_Magazine_Detach.tres" id="12"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/HP-DA/HP-DA_Reload_Empty.tres" id="13"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/HP-DA/HP-DA_Reload_Tactical.tres" id="14"]
+[ext_resource type="Script" path="res://Scripts/WeaponData.gd" id="15"]
+[ext_resource type="Resource" path="res://Audio/Effects/Tails/Tail_Pistol_Indoor.tres" id="16"]
+[ext_resource type="Resource" path="res://Audio/Effects/Tails/Tail_Pistol_Indoor_SD.tres" id="17"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/HP-DA/HP-DA_Tail_Outdoor.tres" id="18"]
+[ext_resource type="Resource" path="res://Audio/Effects/Tails/Tail_Pistol_Outdoor_SD.tres" id="19"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/Beretta92FS/Beretta92FS_3x2.tscn" id="20"]
+
+[resource]
+script = ExtResource("15")
+weaponType = "Pistol"
+weaponAction = "Semi"
+fireSemi = ExtResource("7")
+fireAuto = null
+fireSuppressed = ExtResource("8")
+reloadEmpty = ExtResource("13")
+reloadTactical = ExtResource("14")
+magazineAttachEmpty = ExtResource("10")
+magazineAttachTactical = ExtResource("11")
+magazineDetach = ExtResource("12")
+ammoCheck = ExtResource("2")
+tailOutdoor = ExtResource("18")
+reload = null
+insertStart = null
+insertEnd = null
+insert = null
+tailIndoor = ExtResource("16")
+tailIndoorSuppressed = ExtResource("17")
+tailOutdoorSuppressed = ExtResource("19")
+ammo = ExtResource("1")
+caliber = "9×19"
+casing = 1
+damage = 25.0
+penetration = 1
+fireRate = 0.08
+magazineSize = 15
+kick = 0.04
+kickPower = 20.0
+kickRecovery = 24.0
+verticalRecoil = 0.20
+horizontalRecoil = 0.014
+rotationPower = 20.0
+rotationRecovery = 24.0
+slideDirection = 2
+slideMovement = -0.035
+slideSpeed = 2.0
+slideLock = true
+lowPosition = Vector3(0.02, -0.1, -0.25)
+lowRotation = Vector3(15, 20, 0)
+highPosition = Vector3(0.05, -0.05, -0.3)
+aimPosition = Vector3(0, -0.012, -0.27)
+cantedPosition = Vector3(0, -0.05, -0.22)
+cantedRotation = Vector3(0, 0, -45)
+inspectPosition = Vector3(0.04, -0.05, -0.28)
+inspectRotation = Vector3(0, 0, 10)
+collisionPosition = Vector3(0.03, -0.125, -0.225)
+collisionRotation = Vector3(35, 15, 0)
+file = "NARK_Beretta92FS"
+name = "Beretta 92FS"
+inventory = "92FS"
+rotated = "92FS"
+equipment = "92FS"
+display = "92FS"
+type = "Weapon"
+subtype = "Pistol"
+weight = 0.95
+value = 765
+icon = ExtResource("9")
+tetris = ExtResource("20")
+size = Vector2(3, 2)
+opticOffset = -5.0
+suppressorScale = 0.35
+suppressorOffset = -35.0
+magazineOpticOffset = -5.0
+magazineSuppressorScale = 0.35
+magazineSuppressorOffset = Vector2(-35, 0)
+opticSuppressorScale = 0.35
+opticSuppressorOffset = Vector2(-35, -5)
+fullyModdedScale = 0.35
+fullyModdedOffset = Vector2(-35, -5)
+audio = null
+compatible = [ExtResource("3"), ExtResource("4")]
+slots = ["Primary", "Secondary"]
+material = null
+showCondition = true
+repairs = true
+civilian = true
+military = true
+gunsmith = true
+hunter = false
+orientation = 90.0
+wallOffset = 0.025
+rarity = 0
+industrial = false
+generalist = true
+doctor = false
+driver = false
+grandma = false
