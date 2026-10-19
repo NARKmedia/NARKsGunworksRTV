@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Resource" path="res://Items/Ammo/Ammo_12x70/Ammo_12x70.tres" id="1"]
+[ext_resource type="Texture2D" path="res://NARK_Firearms/Panzer12/Assets/Magazine_Icon.res" id="2"]
+[ext_resource type="Script" path="res://Scripts/ItemData.gd" id="3"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/Panzer12/Panzer12_Magazine_1x2.tscn" id="4"]
+
+[resource]
+script = ExtResource("3")
+file = "NARK_Panzer12_Magazine"
+name = "Panzer 12 Magazine"
+inventory = "Mag."
+rotated = "Mag."
+equipment = "Mag."
+display = "Mag."
+type = "Attachment"
+subtype = "Magazine"
+weight = 0.3
+value = 650
+rarity = 0
+icon = ExtResource("2")
+tetris = ExtResource("4")
+size = Vector2(1, 1)
+audio = null
+compatible = [ExtResource("1")]
+material = null
+showAmount = true
+defaultAmount = 5
+maxAmount = 5
+military = true
+orientation = 90.0
+wallOffset = 0.03
+gunsmith = false
+hunter = true

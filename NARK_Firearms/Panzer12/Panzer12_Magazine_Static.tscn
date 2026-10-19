@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://NARK_Firearms/Panzer12/Assets/Magazine_World.mesh" id="1"]
+[ext_resource type="Material" path="res://NARK_Firearms/Panzer12/Assets/MT_Panzer12.tres" id="2"]
+[ext_resource type="ArrayMesh" path="res://NARK_Firearms/Panzer12/Assets/Magazine_World.mesh" id="3"]
+
+[node name="NARK_Panzer12_Magazine" type="Node3D"]
+
+[node name="LOD0" type="MeshInstance3D" parent="."]
+layers = 4
+visibility_range_end = 10.0
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("2")
+
+[node name="LOD1" type="MeshInstance3D" parent="."]
+layers = 4
+visibility_range_begin = 9.0
+visibility_range_end = 50.0
+mesh = ExtResource("3")
+surface_material_override/0 = ExtResource("2")

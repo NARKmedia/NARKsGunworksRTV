@@ -1,0 +1,126 @@
+[gd_scene format=3]
+
+[ext_resource type="PhysicsMaterial" path="res://Items/Physics/Item_Physics.tres" id="1"]
+[ext_resource type="Script" path="res://Scripts/Pickup.gd" id="2"]
+[ext_resource type="Resource" path="res://NARK_Firearms/Panzer12/Panzer12.tres" id="3"]
+[ext_resource type="Script" path="res://Scripts/SlotData.gd" id="4"]
+[ext_resource type="ArrayMesh" path="res://NARK_Firearms/Panzer12/Assets/Weapon_World.mesh" id="5"]
+[ext_resource type="Material" path="res://NARK_Firearms/Panzer12/Assets/MT_Panzer12.tres" id="6"]
+[ext_resource type="ArrayMesh" path="res://NARK_Firearms/Panzer12/Assets/Weapon_World.mesh" id="11"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/ACOG/ACOG_Static.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/EXPS/EXPS_Static.tscn" id="13"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/HMR/HMR_Static.tscn" id="14"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Kobra/Kobra_Static.tscn" id="16"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Leopard/Leopard_Static.tscn" id="17"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Micro/Micro_Static.tscn" id="18"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Micro/Micro_Mount_Low.tscn" id="19"]
+[ext_resource type="PackedScene" path="res://Items/Weapons/RK-62/RK_Mount.tscn" id="21"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/MRO/MRO_Static.tscn" id="22"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/MRO/MRO_Mount_Low.tscn" id="23"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/PRO/PRO_Static.tscn" id="24"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/Panzer12/Panzer12_Magazine_Static.tscn" id="25"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Vudu/Vudu_Static.tscn" id="28"]
+
+[ext_resource type="PackedScene" path="res://Items/Attachments/Salvo/Salvo_Static.tscn" id="panzerSalvo"]
+
+[ext_resource type="PackedScene" path="res://Items/Attachments/ANPEQ/ANPEQ_Static.tscn" id="panzerANPEQ"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/OZ5/OZ5_Static.tscn" id="panzerOZ5"]
+
+[sub_resource type="Resource" id="Resource_f6fw0"]
+script = ExtResource("4")
+resource_local_to_scene = true
+itemData = ExtResource("3")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yaep2"]
+size = Vector3(0.061068762540817265, 0.23048653662204743, 1.1539214944839478)
+
+[node name="NARK_Panzer12" type="RigidBody3D" node_paths=PackedStringArray("mesh", "collision") groups=["Item"]]
+collision_layer = 4
+collision_mask = 29
+physics_material_override = ExtResource("1")
+script = ExtResource("2")
+slotData = SubResource("Resource_f6fw0")
+mesh = NodePath("LOD0")
+collision = NodePath("Collision")
+
+[node name="LOD0" type="MeshInstance3D" parent="."]
+layers = 4
+visibility_range_end = 10.0
+mesh = ExtResource("5")
+surface_material_override/0 = ExtResource("6")
+
+[node name="LOD1" type="MeshInstance3D" parent="."]
+layers = 4
+visibility_range_begin = 9.0
+visibility_range_end = 50.0
+mesh = ExtResource("11")
+surface_material_override/0 = ExtResource("6")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.734603524208069e-07, -0.04956870526075363, 0.16519083082675934)
+shape = SubResource("BoxShape3D_yaep2")
+
+[node name="Attachments" type="Node3D" parent="."]
+
+[node name="ACOG" parent="Attachments" instance=ExtResource("12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.106, 0.09)
+visible = false
+
+[node name="EXPS" parent="Attachments" instance=ExtResource("13")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.109, 0.04)
+visible = false
+
+[node name="HMR" parent="Attachments" instance=ExtResource("14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.108, 0.04)
+visible = false
+
+[node name="Kobra" parent="Attachments" instance=ExtResource("16")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0.114, 0.06)
+visible = false
+
+[node name="Leopard" parent="Attachments" instance=ExtResource("17")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0.110, 0.10045)
+visible = false
+
+[node name="Micro" parent="Attachments" instance=ExtResource("18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.094, 0.06)
+visible = false
+
+[node name="Micro_Mount_Low" parent="Attachments/Micro" instance=ExtResource("19")]
+
+[node name="Mount" parent="Attachments" instance=ExtResource("21")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.018, -0.06)
+visible = false
+
+[node name="MRO" parent="Attachments" instance=ExtResource("22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.095, 0.06)
+visible = false
+
+[node name="MRO_Mount_Low" parent="Attachments/MRO" instance=ExtResource("23")]
+
+[node name="PRO" parent="Attachments" instance=ExtResource("24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.112, 0.06)
+visible = false
+
+[node name="NARK_Panzer12_Magazine" parent="Attachments" instance=ExtResource("25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07, 0.115)
+visible = false
+
+[node name="Vudu" parent="Attachments" instance=ExtResource("28")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.110, 0.06)
+visible = false
+
+[node name="Muzzle" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006556297652423382, 0.7381515502929688)
+
+[node name="Salvo" parent="Attachments" instance=ExtResource("panzerSalvo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006556297652423382, 0.7381515502929688)
+visible = false
+
+[node name="ANPEQ" parent="Attachments" instance=ExtResource("panzerANPEQ") ]
+transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, -0.032, 0.012, 0.412)
+visible = false
+
+[node name="OZ5" parent="Attachments" instance=ExtResource("panzerOZ5") ]
+transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, -0.037, 0.007, 0.427254)
+visible = false

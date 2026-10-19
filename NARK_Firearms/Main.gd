@@ -20,7 +20,7 @@ func _ready():
 	if lib.has_signal("frameworks_ready") and lib.get("_is_ready") == false:
 		await lib.frameworks_ready
 	_lib = lib
-	for entry in [["Assets/MT_M45A1", "Assets/Albedo", "Assets/Normal"], ["Assets/MT_NDm", "Assets/NDm_Albedo", "Assets/NDm_Normal"], ["Beretta92FS/Assets/MT_Beretta", "Beretta92FS/Assets/Albedo", "Beretta92FS/Assets/Normal"], ["MRS/Assets/MT_MRS", "MRS/Assets/Albedo", "MRS/Assets/Normal"]]:
+	for entry in [["Assets/MT_M45A1", "Assets/Albedo", "Assets/Normal"], ["Assets/MT_NDm", "Assets/NDm_Albedo", "Assets/NDm_Normal"], ["Beretta92FS/Assets/MT_Beretta", "Beretta92FS/Assets/Albedo", "Beretta92FS/Assets/Normal"], ["MRS/Assets/MT_MRS", "MRS/Assets/Albedo", "MRS/Assets/Normal"], ["Panzer12/Assets/MT_Panzer12", "Panzer12/Assets/Albedo", "Panzer12/Assets/Normal"]]:
 		var material = load("res://NARK_Firearms/" + entry[0] + ".tres") as ShaderMaterial
 		var albedo = load_texture("res://NARK_Firearms/" + entry[1] + ".png", false)
 		var normal = load_texture("res://NARK_Firearms/" + entry[2] + ".png", true)
@@ -29,7 +29,7 @@ func _ready():
 		material.set_shader_parameter("albedo", albedo)
 		material.set_shader_parameter("normal", normal)
 		_materials.append(material)
-	for entry in [["NARK_M45A1_Magazine", "M45A1_Magazine"], ["NARK_NDm_Laser", "NDm"], ["NARK_M45A1", "M45A1"], ["NARK_Beretta92FS_Magazine", "Beretta92FS/Beretta92FS_Magazine"], ["NARK_Beretta92FS", "Beretta92FS/Beretta92FS"], ["NARK_MRS_Magazine", "MRS/MRS_Magazine"], ["NARK_MRS", "MRS/MRS"]]:
+	for entry in [["NARK_M45A1_Magazine", "M45A1_Magazine"], ["NARK_NDm_Laser", "NDm"], ["NARK_M45A1", "M45A1"], ["NARK_Beretta92FS_Magazine", "Beretta92FS/Beretta92FS_Magazine"], ["NARK_Beretta92FS", "Beretta92FS/Beretta92FS"], ["NARK_MRS_Magazine", "MRS/MRS_Magazine"], ["NARK_MRS", "MRS/MRS"], ["NARK_Panzer12_Magazine", "Panzer12/Panzer12_Magazine"], ["NARK_Panzer12", "Panzer12/Panzer12"]]:
 		var item = load("res://NARK_Firearms/" + entry[1] + ".tres")
 		var world = load("res://NARK_Firearms/" + entry[1] + ".tscn")
 		if item == null or world == null:
@@ -46,6 +46,9 @@ func _ready():
 	var mrs_rig = load("res://NARK_Firearms/MRS/MRS_Rig.tscn")
 	if mrs_rig != null:
 		lib.register("scenes", "NARK_MRS_Rig", mrs_rig)
+	var panzer_rig = load("res://NARK_Firearms/Panzer12/Panzer12_Rig.tscn")
+	if panzer_rig != null:
+		lib.register("scenes", "NARK_Panzer12_Rig", panzer_rig)
 	configure_magazines()
 
 func _exit_tree():
@@ -76,6 +79,8 @@ func configure_magazines():
 		_hook_ids.append(_lib.hook("weaponrig-playmagazineattachtactical-pre", _on_rig_magazine, 960))
 
 		_hook_ids.append(_lib.hook("weaponrig-updatebullets-pre", _on_rig_magazine, 960))
+		_hook_ids.append(_lib.hook("weaponrig-playmagazineattachempty-pre", _on_panzer_magazine_load, 960))
+		_hook_ids.append(_lib.hook("weaponrig-playmagazineattachtactical-pre", _on_panzer_magazine_load, 960))
 
 func append_magazine(id: String, fallback, magazine):
 	var weapon = _lib.get_entry("items", id) if _lib.has_method("get_entry") else fallback
@@ -255,3 +260,12 @@ func load_texture(path: String, normal: bool) -> Texture2D:
 	if image.generate_mipmaps(normal) != OK:
 		return null
 	return ImageTexture.create_from_image(image)
+
+func _on_panzer_magazine_load(_result = null):
+	var rig = _lib.get("_caller")
+	if not is_instance_valid(rig):
+		return
+	var slot = rig.get("slotData")
+	if slot == null or slot.itemData == null or slot.itemData.file != "NARK_Panzer12":
+		return
+	rig.UpdateBullets()

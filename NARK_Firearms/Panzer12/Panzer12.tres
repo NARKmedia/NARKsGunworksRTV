@@ -1,0 +1,121 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Resource" path="res://Items/Ammo/Ammo_12x70/Ammo_12x70.tres" id="1"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/RK/RK_Magazine_Check.tres" id="2"]
+[ext_resource type="Resource" path="res://NARK_Firearms/Panzer12/Panzer12_Magazine.tres" id="3"]
+[ext_resource type="Resource" path="res://Items/Attachments/ACOG/ACOG.tres" id="4"]
+[ext_resource type="Resource" path="res://Items/Attachments/EXPS/EXPS.tres" id="5"]
+[ext_resource type="Resource" path="res://Items/Attachments/HMR/HMR.tres" id="6"]
+[ext_resource type="Resource" path="res://Items/Attachments/Kobra/Kobra.tres" id="8"]
+[ext_resource type="Resource" path="res://Items/Attachments/Leopard/Leopard.tres" id="9"]
+[ext_resource type="Resource" path="res://Items/Attachments/Micro/Micro.tres" id="10"]
+[ext_resource type="Resource" path="res://Items/Attachments/MRO/MRO.tres" id="12"]
+[ext_resource type="Resource" path="res://Items/Attachments/PRO/PRO.tres" id="13"]
+[ext_resource type="Resource" path="res://Items/Attachments/Vudu/Vudu.tres" id="16"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/Remington_870/Remington_870_Fire.tres" id="18"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/Remington_870/Remington_870_Fire_Suppressed.tres" id="19"]
+[ext_resource type="Texture2D" path="res://NARK_Firearms/Panzer12/Assets/Icon.res" id="20"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/RK/RK_Magazine_Attach_Empty.tres" id="21"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/RK/RK_Magazine_Attach_Tactical.tres" id="22"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/RK/RK_Magazine_Detach.tres" id="23"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/RK/RK_Reload_Empty.tres" id="24"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/RK/RK_Reload_Tactical.tres" id="25"]
+[ext_resource type="Script" path="res://Scripts/WeaponData.gd" id="26"]
+[ext_resource type="Resource" path="res://Audio/Effects/Tails/Tail_Shotgun_Indoor.tres" id="27"]
+[ext_resource type="Resource" path="res://Audio/Effects/Tails/Tail_Shotgun_Indoor_SD.tres" id="28"]
+[ext_resource type="Resource" path="res://Audio/Equipment/Weapons/Remington_870/Remington_870_Tail_Outdoor.tres" id="29"]
+[ext_resource type="Resource" path="res://Audio/Effects/Tails/Tail_Shotgun_Outdoor_SD.tres" id="30"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/Panzer12/Panzer12_7x2.tscn" id="31"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/Salvo/Salvo.tres" id="panzerSalvo"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/ANPEQ/ANPEQ.tres" id="panzerANPEQ"]
+[ext_resource type="Resource" path="res://Items/Attachments/OZ5/OZ5.tres" id="panzerOZ5"]
+
+[resource]
+script = ExtResource("26")
+weaponType = "Shotgun"
+weaponAction = "Semi"
+fireSemi = ExtResource("18")
+fireAuto = null
+fireSuppressed = ExtResource("19")
+reloadEmpty = ExtResource("24")
+reloadTactical = ExtResource("25")
+magazineAttachEmpty = ExtResource("21")
+magazineAttachTactical = ExtResource("22")
+magazineDetach = ExtResource("23")
+ammoCheck = ExtResource("2")
+tailOutdoor = ExtResource("29")
+reload = null
+insertStart = null
+insertEnd = null
+insert = null
+tailIndoor = ExtResource("27")
+tailIndoorSuppressed = ExtResource("28")
+tailOutdoorSuppressed = ExtResource("30")
+ammo = ExtResource("1")
+caliber = "12/70"
+casing = 3
+damage = 40.0
+penetration = 2
+fireRate = 0.09
+magazineSize = 5
+kick = 0.18
+kickPower = 20.0
+kickRecovery = 19.0
+verticalRecoil = 0.155
+horizontalRecoil = 0.014
+rotationPower = 20.0
+rotationRecovery = 19.0
+slideDirection = 2
+slideMovement = -0.12
+slideSpeed = 2.0
+useMount = true
+lowPosition = Vector3(0.02, -0.1, -0.18)
+lowRotation = Vector3(15, 20, 0)
+highPosition = Vector3(0.05, -0.07, -0.16)
+aimPosition = Vector3(0, -0.06025, -0.14)
+cantedPosition = Vector3(0, -0.075, -0.15)
+cantedRotation = Vector3(0, 0, -45)
+inspectPosition = Vector3(0, -0.1, -0.14)
+inspectRotation = Vector3(-6, 0, -2.5)
+collisionPosition = Vector3(0.03, -0.15, -0.12)
+collisionRotation = Vector3(45, 15, 0)
+file = "NARK_Panzer12"
+name = "Panzer 12"
+inventory = "Panzer 12"
+rotated = "Panzer 12"
+equipment = "Panzer 12"
+display = "Panzer 12"
+type = "Weapon"
+subtype = "Shotgun"
+weight = 4.8
+value = 6250
+rarity = 0
+icon = ExtResource("20")
+tetris = ExtResource("31")
+size = Vector2(7, 2)
+opticOffset = -14.0
+suppressorScale = 0.42
+suppressorOffset = -32.5
+magazineOpticOffset = -14.0
+magazineSuppressorScale = 0.42
+magazineSuppressorOffset = Vector2(-32.5, 0)
+opticSuppressorScale = 0.4
+opticSuppressorOffset = Vector2(-31, -12)
+fullyModdedScale = 0.4
+fullyModdedOffset = Vector2(-31, -12)
+audio = null
+compatible = [ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("8"), ExtResource("9"), ExtResource("10"), ExtResource("12"), ExtResource("13"), ExtResource("16"), ExtResource("panzerSalvo"), ExtResource("panzerANPEQ"), ExtResource("panzerOZ5")]
+slots = ["Primary"]
+material = null
+showCondition = true
+repairs = true
+military = true
+orientation = 90.0
+wallOffset = 0.04
+gunsmith = false
+hunter = true
+selectorRotation = Vector2(5, -5)
+opticScale = 0.45
+magazineOpticScale = 0.45

@@ -1,0 +1,6 @@
+[gd_scene format=3]
+[ext_resource type="ArrayMesh" path="res://NARK_Firearms/Panzer12/Assets/Shell.mesh" id="1"]
+[ext_resource type="Material" path="res://Items/Ammo/Cartridges/Files/MT_Cartridge_Shotgun.tres" id="2"]
+[node name="Cartridge_Shotgun" type="MeshInstance3D"]
+mesh = ExtResource("1")
+surface_material_override/0 = ExtResource("2")

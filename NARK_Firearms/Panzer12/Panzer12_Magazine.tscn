@@ -1,0 +1,53 @@
+[gd_scene format=3]
+
+[ext_resource type="PhysicsMaterial" path="res://Items/Physics/Item_Physics.tres" id="1"]
+[ext_resource type="Script" path="res://Scripts/Pickup.gd" id="2"]
+[ext_resource type="Resource" path="res://NARK_Firearms/Panzer12/Panzer12_Magazine.tres" id="3"]
+[ext_resource type="Script" path="res://Scripts/SlotData.gd" id="4"]
+[ext_resource type="ArrayMesh" path="res://NARK_Firearms/Panzer12/Assets/Magazine_World.mesh" id="5"]
+[ext_resource type="Material" path="res://NARK_Firearms/Panzer12/Assets/MT_Panzer12.tres" id="6"]
+[ext_resource type="ArrayMesh" path="res://NARK_Firearms/Panzer12/Assets/Magazine_World.mesh" id="7"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/Panzer12/Cartridge_Shotgun.tscn" id="8"]
+
+[sub_resource type="Resource" id="Resource_hpufx"]
+script = ExtResource("4")
+resource_local_to_scene = true
+itemData = ExtResource("3")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yaep2"]
+size = Vector3(0.03, 0.15, 0.08)
+
+[node name="NARK_Panzer12_Magazine" type="RigidBody3D" node_paths=PackedStringArray("mesh", "collision") groups=["Item"]]
+collision_layer = 4
+collision_mask = 29
+physics_material_override = ExtResource("1")
+script = ExtResource("2")
+slotData = SubResource("Resource_hpufx")
+mesh = NodePath("LOD0")
+collision = NodePath("Collision")
+
+[node name="LOD0" type="MeshInstance3D" parent="."]
+layers = 4
+visibility_range_end = 10.0
+mesh = ExtResource("5")
+surface_material_override/0 = ExtResource("6")
+
+[node name="LOD1" type="MeshInstance3D" parent="."]
+layers = 4
+visibility_range_begin = 9.0
+visibility_range_end = 25.0
+mesh = ExtResource("7")
+surface_material_override/0 = ExtResource("6")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_yaep2")
+
+[node name="Bullets" type="Node3D" parent="."]
+
+[node name="Cartridge_Rifle" parent="Bullets" instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.776396194787139e-11, 0.028971948610538154, 0.02)
+visible = false
+
+[node name="Cartridge_Rifle_2" parent="Bullets" instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.776396194787139e-11, 0.054971948610538154, 0.02)
+visible = false

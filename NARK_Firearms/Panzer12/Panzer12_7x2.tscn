@@ -1,0 +1,85 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://UI/Effects/MT_Item.tres" id="1"]
+[ext_resource type="Texture2D" path="res://NARK_Firearms/Panzer12/Assets/Icon.res" id="2"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/ACOG/ACOG_2x1.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/EXPS/EXPS_1x1.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/HMR/HMR_2x1.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Kobra/Kobra_2x1.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Leopard/Leopard_3x1.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Micro/Micro_1x1.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/MRO/MRO_1x1.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/PRO/PRO_2x1.tscn" id="13"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Vudu/Vudu_3x1.tscn" id="16"]
+
+[ext_resource type="PackedScene" path="res://Items/Attachments/Salvo/Salvo_3x1.tscn" id="panzerSalvo"]
+
+[ext_resource type="PackedScene" path="res://Items/Attachments/ANPEQ/ANPEQ_1x1_Side.tscn" id="panzerANPEQ"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/OZ5/OZ5_2x1.tscn" id="panzerOZ5"]
+
+[ext_resource type="PackedScene" path="res://NARK_Firearms/Panzer12/Panzer12_Magazine_1x2.tscn" id="panzerMagUI"]
+
+[node name="NARK_Panzer12" type="Sprite2D"]
+material = ExtResource("1")
+position = Vector2(224, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2")
+
+[node name="ACOG" parent="." instance=ExtResource("3")]
+visible = false
+position = Vector2(-96.9, -113)
+
+[node name="EXPS" parent="." instance=ExtResource("4")]
+visible = false
+position = Vector2(-89.3, -113)
+scale = Vector2(0.6, 0.6)
+
+[node name="HMR" parent="." instance=ExtResource("5")]
+visible = false
+position = Vector2(-110.9, -117)
+
+[node name="Kobra" parent="." instance=ExtResource("7")]
+visible = false
+position = Vector2(-80, -107)
+
+[node name="Leopard" parent="." instance=ExtResource("8")]
+visible = false
+position = Vector2(-76.4, -113)
+
+[node name="NARK_Panzer12_Magazine" parent="." instance=ExtResource("panzerMagUI")]
+visible = false
+show_behind_parent = true
+position = Vector2(1, 31)
+scale = Vector2(1.1, 1.05)
+
+[node name="Micro" parent="." instance=ExtResource("10")]
+visible = false
+position = Vector2(-92.1, -105)
+scale = Vector2(0.55, 0.55)
+
+[node name="MRO" parent="." instance=ExtResource("12")]
+visible = false
+position = Vector2(-96.4, -107)
+
+[node name="PRO" parent="." instance=ExtResource("13")]
+visible = false
+position = Vector2(-75, -113)
+
+[node name="Vudu" parent="." instance=ExtResource("16")]
+visible = false
+position = Vector2(-75.5, -113)
+scale = Vector2(0.55, 0.55)
+
+[node name="Salvo" parent="." instance=ExtResource("panzerSalvo")]
+visible = false
+show_behind_parent = true
+position = Vector2(458, -57)
+scale = Vector2(0.4, 0.4)
+
+[node name="ANPEQ" parent="." instance=ExtResource("panzerANPEQ") ]
+visible = false
+position = Vector2(176, -61)
+
+[node name="OZ5" parent="." instance=ExtResource("panzerOZ5") ]
+visible = false
+position = Vector2(187, -57)
