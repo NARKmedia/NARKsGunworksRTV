@@ -12,8 +12,11 @@ var _vm_voice_index = 0
 var _vm_states
 var _vm_sights
 var _vm_optic_aim:Dictionary={}
+var _vm_vostac
 
 func _ready():
+ var foundation=get_node_or_null("/root/NARK_Firearms")
+ if foundation!=null:_vm_vostac=foundation._vostac
  _vm_config = JSON.parse_string(FileAccess.get_file_as_string(_vm_config_path))
  var holder = get_node("Handling/Sway/Noise/Tilt/Impulse/Recoil/Holder/"+_vm_config.base)
  holder.get_node("Armature/Skeleton3D").hide()
@@ -114,6 +117,9 @@ func _ready():
  if _vm_config.get("library_mounts",[]).any(func(m):return m.subtype=="Magazine"):
   var visuals=load("res://NARK_Firearms/LibraryMagazines.gd").new()
   add_child(visuals);visuals.configure(self,model,_vm_config.library_mounts,_vm_config.get("imported_magazine_id",""))
+
+func _vm_vostac_active() -> bool:
+ return _vm_vostac!=null
 
 func _vm_vec(value) -> Vector3:
  return Vector3(value[0], value[1], value[2])

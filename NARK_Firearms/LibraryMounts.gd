@@ -8,9 +8,14 @@ func configure(rig,model,items):
  if rig.attachments!=null:rig.attachments.hide()
  var weapon=model.get_node("WeaponRig/Skeleton3D") as Skeleton3D
  var mesh=weapon.get_node("Weapon") as MeshInstance3D
- var anchor=BoneAttachment3D.new();anchor.bone_idx=0;anchor.bone_name=weapon.get_bone_name(0);weapon.add_child(anchor)
- var reference=Node3D.new();anchor.add_child(reference);reference.transform=mesh.skin.get_bind_pose(0)
- var container=Node3D.new();container.name="GunworksAttachments";reference.add_child(container);rig.attachments=container
+ var container=Node3D.new();container.name="GunworksAttachments"
+ if rig._vm_vostac!=null:
+  model.add_child(container)
+ else:
+  var anchor=BoneAttachment3D.new();anchor.bone_idx=0;anchor.bone_name=weapon.get_bone_name(0);weapon.add_child(anchor)
+  var reference=Node3D.new();anchor.add_child(reference);reference.transform=mesh.skin.get_bind_pose(0)
+  reference.add_child(container)
+ rig.attachments=container
  for item in items:
   if item.subtype=="Magazine":continue
   var scene=load(item.scene) as PackedScene
@@ -32,7 +37,12 @@ func configure(rig,model,items):
  var aim_basis=handling._vm_ads_basis() if handling.has_method("_vm_ads_basis") else Basis.IDENTITY
  for entry in _cache:
   if entry.subtype=="Optic":
+   var rail_min=entry.node.minPosition-entry.node.defaultPosition
+   var rail_max=entry.node.maxPosition-entry.node.defaultPosition
    entry.node.defaultPosition=entry.node.position.z
+   if rig._vm_vostac!=null:
+    entry.node.minPosition=entry.node.defaultPosition+rail_min
+    entry.node.maxPosition=entry.node.defaultPosition+rail_max
    var pose=model.global_transform.affine_inverse()*entry.node.global_transform
    pose=Transform3D(aim_basis,Vector3.ZERO)*pose
    var secondary=entry.node.get("secondary")

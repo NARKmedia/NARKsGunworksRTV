@@ -1,7 +1,7 @@
 [mod]
 id="nark_firearms"
 name="NARK's Gunworks"
-version="1.0"
+version="1.1"
 author="NARK"
 description="Custom weapons, magazines and attachments assembled with NARK VosModel."
 priority=970
@@ -14,6 +14,9 @@ NARK_Firearms="res://NARK_Firearms/Main.gd"
 res://Scripts/Item.gd="Initialize"
 res://Scripts/Pickup.gd="UpdateAttachments"
 res://Scripts/WeaponRig.gd="_ready,Magazine,PlayMagazineAttachEmpty,PlayMagazineAttachTactical,PlayReloadEmpty,PlayReloadTactical,UpdateBullets"
+
+res://Scripts/RigManager.gd="UpdateRig"
+res://Scripts/Handling.gd="WeaponHandling"
 
 [registry]
 

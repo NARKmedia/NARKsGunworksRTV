@@ -3,12 +3,18 @@ extends Node
 var _textures:Dictionary={}
 var _materials:Array[ShaderMaterial]=[]
 var _legacy
+var _vostac
 
 func _ready():
  var lib=Engine.get_meta("RTVModLib",null)
  if lib==null or not lib.has_method("register"):return
  if lib.has_signal("frameworks_ready") and lib.get("_is_ready")==false:await lib.frameworks_ready
  var manifest=JSON.parse_string(FileAccess.get_file_as_string("res://NARK_Firearms/Manifest.json"))
+ var vostac=get_node_or_null("/root/LikhosVosTac")
+ var adapter_path=str(manifest.get("vostac_adapter",""))
+ if vostac!=null and adapter_path!="":
+  var adapter=load(adapter_path).new()
+  if adapter.configure(lib,vostac):_vostac=adapter
  for entry in manifest.materials:
   var material=load(entry.path) as ShaderMaterial
   if material==null:continue
