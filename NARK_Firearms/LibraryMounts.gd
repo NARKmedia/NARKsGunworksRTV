@@ -8,7 +8,7 @@ func configure(rig,model,items):
  if rig.attachments!=null:rig.attachments.hide()
  var weapon=model.get_node("WeaponRig/Skeleton3D") as Skeleton3D
  var mesh=weapon.get_node("Weapon") as MeshInstance3D
- var container=Node3D.new();container.name="GunworksAttachments"
+ var container=Node3D.new();container.name="Attachments"
  if rig._vm_vostac!=null:
   model.add_child(container)
  else:
