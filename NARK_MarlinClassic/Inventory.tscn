@@ -1,7 +1,39 @@
 [gd_scene format=3]
 [ext_resource type="Material" path="res://UI/Effects/MT_Item.tres" id="item"]
 [ext_resource type="Texture2D" path="res://NARK_MarlinClassic/Assets/Icon.res" id="icon"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Hybrid/Hybrid_2x1.tscn" id="overlay_0"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Monster/Monster_2x1.tscn" id="overlay_1"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/SOCOM/SOCOM_2x1.tscn" id="overlay_2"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Thor/Thor_2x1.tscn" id="overlay_3"]
 
 [node name="NARK_MarlinClassic" type="Sprite2D"]
 material = ExtResource("item")
 texture = ExtResource("icon")
+
+[node name="Hybrid" parent="." instance=ExtResource("overlay_0")]
+visible = false
+position = Vector2(508.0, -62.1)
+scale = Vector2(0.7, 0.7)
+rotation = 0.0
+show_behind_parent = false
+
+[node name="Monster" parent="." instance=ExtResource("overlay_1")]
+visible = false
+position = Vector2(501.7, -62.9)
+scale = Vector2(0.7, 0.7)
+rotation = 0.0
+show_behind_parent = false
+
+[node name="SOCOM" parent="." instance=ExtResource("overlay_2")]
+visible = false
+position = Vector2(500.7, -61.3)
+scale = Vector2(0.7, 0.7)
+rotation = 0.0
+show_behind_parent = false
+
+[node name="Thor" parent="." instance=ExtResource("overlay_3")]
+visible = false
+position = Vector2(511.3, -61.3)
+scale = Vector2(0.7, 0.7)
+rotation = 0.0
+show_behind_parent = false

@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" path="res://Items/Attachments/Kobra/Kobra_Static.tscn" id="gw_3"]
 [ext_resource type="PackedScene" path="res://Items/Attachments/Micro/Micro_Static.tscn" id="gw_4"]
 [ext_resource type="PackedScene" path="res://NARK_Firearms/NDm_Static.tscn" id="gw_5"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Salvo/Salvo_Static.tscn" id="gw_6"]
 
 [sub_resource type="Resource" id="Slot"]
 resource_local_to_scene = true
@@ -60,3 +61,7 @@ transform = Transform3D(1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, 0.0, 
 [node name="NARK_NDm_Laser" parent="Attachments" instance=ExtResource("gw_5")]
 visible = false
 transform = Transform3D(1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, -0.0008704952779226, -0.0800997763872147, 0.224914312362671)
+
+[node name="Salvo" parent="Attachments" instance=ExtResource("gw_6")]
+visible = false
+transform = Transform3D(1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, -0.00114882364869118, -0.0203623678535223, 0.267262101173401)

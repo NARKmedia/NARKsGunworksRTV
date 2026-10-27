@@ -1,22 +1,22 @@
 [gd_scene format=3]
 
-[ext_resource type="ArrayMesh" path="res://NARK_KSG/Assets/Arms.mesh" id="1_kv17h"]
-[ext_resource type="ArrayMesh" path="res://NARK_KSG/Assets/Weapon.mesh" id="2_a8bnn"]
-[ext_resource type="ArrayMesh" path="res://NARK_KSG/Assets/Ammo.mesh" id="3_3ukd0"]
-[ext_resource type="Animation" path="res://NARK_KSG/Assets/Ammo_Check.res" id="4_3ueny"]
-[ext_resource type="Animation" path="res://NARK_KSG/Assets/Idle.res" id="5_nlh8t"]
-[ext_resource type="Animation" path="res://NARK_KSG/Assets/Insert.res" id="6_3tpq3"]
-[ext_resource type="Animation" path="res://NARK_KSG/Assets/Insert_End.res" id="7_dpavr"]
-[ext_resource type="Animation" path="res://NARK_KSG/Assets/Insert_Idle.res" id="8_b04vl"]
-[ext_resource type="Animation" path="res://NARK_KSG/Assets/Insert_Start.res" id="9_hvnlw"]
-[ext_resource type="Animation" path="res://NARK_KSG/Assets/Inspect_Back.res" id="10_l6t7g"]
-[ext_resource type="Animation" path="res://NARK_KSG/Assets/Inspect_Back_Idle.res" id="11_aay2w"]
-[ext_resource type="Animation" path="res://NARK_KSG/Assets/Inspect_Back_Return.res" id="12_itwi4"]
-[ext_resource type="Animation" path="res://NARK_KSG/Assets/Inspect_Front.res" id="13_ynst1"]
-[ext_resource type="Animation" path="res://NARK_KSG/Assets/Inspect_Front_Idle.res" id="14_ru26n"]
-[ext_resource type="Animation" path="res://NARK_KSG/Assets/Reload.res" id="15_jvsc4"]
+[ext_resource type="ArrayMesh" path="res://NARK_KSG/Assets/Arms.mesh" id="1_3ckkn"]
+[ext_resource type="ArrayMesh" path="res://NARK_KSG/Assets/Weapon.mesh" id="2_qf15i"]
+[ext_resource type="ArrayMesh" path="res://NARK_KSG/Assets/Ammo.mesh" id="3_l05pw"]
+[ext_resource type="Animation" path="res://NARK_KSG/Assets/Ammo_Check.res" id="4_84mkf"]
+[ext_resource type="Animation" path="res://NARK_KSG/Assets/Idle.res" id="5_wthvw"]
+[ext_resource type="Animation" path="res://NARK_KSG/Assets/Insert.res" id="6_fw7sh"]
+[ext_resource type="Animation" path="res://NARK_KSG/Assets/Insert_End.res" id="7_lc22r"]
+[ext_resource type="Animation" path="res://NARK_KSG/Assets/Insert_Idle.res" id="8_83qnh"]
+[ext_resource type="Animation" path="res://NARK_KSG/Assets/Insert_Start.res" id="9_p62so"]
+[ext_resource type="Animation" path="res://NARK_KSG/Assets/Inspect_Back.res" id="10_grwrt"]
+[ext_resource type="Animation" path="res://NARK_KSG/Assets/Inspect_Back_Idle.res" id="11_jljtt"]
+[ext_resource type="Animation" path="res://NARK_KSG/Assets/Inspect_Back_Return.res" id="12_lo2i0"]
+[ext_resource type="Animation" path="res://NARK_KSG/Assets/Inspect_Front.res" id="13_cj1mh"]
+[ext_resource type="Animation" path="res://NARK_KSG/Assets/Inspect_Front_Idle.res" id="14_rw6wg"]
+[ext_resource type="Animation" path="res://NARK_KSG/Assets/Reload.res" id="15_fnnqo"]
 
-[sub_resource type="Skin" id="Skin_1l0sd"]
+[sub_resource type="Skin" id="Skin_1xfse"]
 resource_name = "Skin"
 bind_count = 51
 bind/0/name = &""
@@ -173,7 +173,7 @@ bind/50/name = &""
 bind/50/bone = 50
 bind/50/pose = Transform3D(-0.01, 3.8941437e-09, -6.584767e-16, 3.894144e-09, 0.010000001, -1.6858741e-09, 1.9731322e-18, -1.6858741e-09, -0.010000001, 0.0021068286, -0.0002912825, -4.33541e-19)
 
-[sub_resource type="Skin" id="Skin_xbkmd"]
+[sub_resource type="Skin" id="Skin_u66ni"]
 resource_name = "Skin2"
 bind_count = 8
 bind/0/name = &""
@@ -201,34 +201,34 @@ bind/7/name = &""
 bind/7/bone = 7
 bind/7/pose = Transform3D(-0.01, 1.2246468e-18, -1.2246468e-18, 1.2246468e-18, 0.01, 6.123233e-19, 1.2246468e-18, 6.123233e-19, -0.01, 3.2754109e-19, -0.0003121426, 0.0029362615)
 
-[sub_resource type="Skin" id="Skin_8ubro"]
+[sub_resource type="Skin" id="Skin_n27pp"]
 resource_name = "Skin3"
 bind_count = 1
 bind/0/name = &""
 bind/0/bone = 0
 bind/0/pose = Transform3D(-0.01, 1.2246468e-18, -1.2246468e-18, 1.2246468e-18, 0.01, 6.123233e-19, 1.2246468e-18, 6.123233e-19, -0.01, -2.3414095e-20, 1.1707052e-20, -0.0001911906)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xddfc"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fysxm"]
 _data = {
-&"Ammo_Check": ExtResource("4_3ueny"),
-&"Idle": ExtResource("5_nlh8t"),
-&"Insert": ExtResource("6_3tpq3"),
-&"Insert_End": ExtResource("7_dpavr"),
-&"Insert_Idle": ExtResource("8_b04vl"),
-&"Insert_Start": ExtResource("9_hvnlw"),
-&"Inspect_Back": ExtResource("10_l6t7g"),
-&"Inspect_Back_Idle": ExtResource("11_aay2w"),
-&"Inspect_Back_Return": ExtResource("12_itwi4"),
-&"Inspect_Front": ExtResource("13_ynst1"),
-&"Inspect_Front_Idle": ExtResource("14_ru26n"),
-&"Reload": ExtResource("15_jvsc4")
+&"Ammo_Check": ExtResource("4_84mkf"),
+&"Idle": ExtResource("5_wthvw"),
+&"Insert": ExtResource("6_fw7sh"),
+&"Insert_End": ExtResource("7_lc22r"),
+&"Insert_Idle": ExtResource("8_83qnh"),
+&"Insert_Start": ExtResource("9_p62so"),
+&"Inspect_Back": ExtResource("10_grwrt"),
+&"Inspect_Back_Idle": ExtResource("11_jljtt"),
+&"Inspect_Back_Return": ExtResource("12_lo2i0"),
+&"Inspect_Front": ExtResource("13_cj1mh"),
+&"Inspect_Front_Idle": ExtResource("14_rw6wg"),
+&"Reload": ExtResource("15_fnnqo")
 }
 
-[node name="@Node3D@2" type="Node3D" unique_id=1173309950]
+[node name="@Node3D@2" type="Node3D" unique_id=602647078]
 
-[node name="ArmsRig" type="Node3D" parent="." unique_id=2051643362]
+[node name="ArmsRig" type="Node3D" parent="." unique_id=502595426]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="ArmsRig" unique_id=1858600768]
+[node name="Skeleton3D" type="Skeleton3D" parent="ArmsRig" unique_id=1236395602]
 bones/0/name = "NARK_Root"
 bones/0/parent = -1
 bones/0/rest = Transform3D(100, 0, 0, 0, 1.7881393e-05, -99.99999, 0, 99.99999, 1.7881393e-05, 0, 0, 0)
@@ -587,16 +587,16 @@ bones/50/position = Vector3(0.0021068286, 7.998849e-27, -0.00029128167)
 bones/50/rotation = Quaternion(-1.8831395e-07, -0.7071068, 0.7071067, -1.8831395e-07)
 bones/50/scale = Vector3(1, 1, 1)
 
-[node name="Arms" type="MeshInstance3D" parent="ArmsRig/Skeleton3D" unique_id=2000028766]
+[node name="Arms" type="MeshInstance3D" parent="ArmsRig/Skeleton3D" unique_id=391033341]
 layers = 2
 cast_shadow = 0
-mesh = ExtResource("1_kv17h")
-skin = SubResource("Skin_1l0sd")
+mesh = ExtResource("1_3ckkn")
+skin = SubResource("Skin_1xfse")
 skeleton = NodePath("..")
 
-[node name="WeaponRig" type="Node3D" parent="." unique_id=838167193]
+[node name="WeaponRig" type="Node3D" parent="." unique_id=1609680529]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="WeaponRig" unique_id=1352704379]
+[node name="Skeleton3D" type="Skeleton3D" parent="WeaponRig" unique_id=10603305]
 bones/0/name = "bone_nvm_ksg_frame"
 bones/0/parent = -1
 bones/0/rest = Transform3D(-100, 1.2246468e-14, 1.2246468e-14, 1.2246468e-14, 100, 6.123233e-15, -1.2246468e-14, 6.123233e-15, -100, 1.8885273e-17, -0.08505171, 0.0010904067)
@@ -654,16 +654,16 @@ bones/7/position = Vector3(-3.3194693e-20, 0.0011626597, -0.0029253573)
 bones/7/rotation = Quaternion(1.3012624e-32, -1.2690321e-33, -7.181949e-33, 1)
 bones/7/scale = Vector3(1, 1, 1)
 
-[node name="Weapon" type="MeshInstance3D" parent="WeaponRig/Skeleton3D" unique_id=1357231703]
+[node name="Weapon" type="MeshInstance3D" parent="WeaponRig/Skeleton3D" unique_id=1553279302]
 layers = 2
 cast_shadow = 0
-mesh = ExtResource("2_a8bnn")
-skin = SubResource("Skin_xbkmd")
+mesh = ExtResource("2_qf15i")
+skin = SubResource("Skin_u66ni")
 skeleton = NodePath("..")
 
-[node name="AmmoRig" type="Node3D" parent="." unique_id=335513344]
+[node name="AmmoRig" type="Node3D" parent="." unique_id=1759940158]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="AmmoRig" unique_id=2034798274]
+[node name="Skeleton3D" type="Skeleton3D" parent="AmmoRig" unique_id=222052182]
 bones/0/name = "bone_nvm_ksg_shell"
 bones/0/parent = -1
 bones/0/rest = Transform3D(-100, 1.2246468e-14, 1.2246468e-14, 1.2246468e-14, 100, 6.123233e-15, -1.2246468e-14, 6.123233e-15, -100, 0, -5.760357e-25, -0.01911906)
@@ -672,13 +672,13 @@ bones/0/position = Vector3(0.049999993, -0.3438445, -0.7371536)
 bones/0/rotation = Quaternion(6.123234e-17, 1, 3.0616165e-17, 6.123234e-17)
 bones/0/scale = Vector3(120.00001, 120.00001, 120.00001)
 
-[node name="Ammo" type="MeshInstance3D" parent="AmmoRig/Skeleton3D" unique_id=1678795912]
+[node name="Ammo" type="MeshInstance3D" parent="AmmoRig/Skeleton3D" unique_id=1596385394]
 layers = 2
 cast_shadow = 0
-mesh = ExtResource("3_3ukd0")
-skin = SubResource("Skin_8ubro")
+mesh = ExtResource("3_l05pw")
+skin = SubResource("Skin_n27pp")
 skeleton = NodePath("..")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=638628418]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1170259083]
 callback_mode_process = 2
-libraries/ = SubResource("AnimationLibrary_xddfc")
+libraries/ = SubResource("AnimationLibrary_fysxm")

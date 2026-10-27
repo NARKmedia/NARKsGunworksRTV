@@ -18,6 +18,8 @@
 
 [ext_resource type="Resource" path="res://NARK_Firearms/NDm.tres" id="gw_compat_5"]
 
+[ext_resource type="Resource" path="res://Items/Attachments/Salvo/Salvo.tres" id="gw_compat_6"]
+
 [ext_resource type="Texture2D" path="res://NARK_KSG/Assets/Icon.res" id="gw_icon"]
 
 [ext_resource type="PackedScene" path="res://NARK_KSG/Inventory.tscn" id="gw_tetris"]
@@ -83,7 +85,7 @@ icon = ExtResource("gw_icon")
 tetris = ExtResource("gw_tetris")
 size = Vector2(5, 2)
 audio = null
-compatible = [ExtResource("gw_compat_0"), ExtResource("gw_compat_1"), ExtResource("gw_compat_2"), ExtResource("gw_compat_3"), ExtResource("gw_compat_4"), ExtResource("gw_compat_5")]
+compatible = [ExtResource("gw_compat_0"), ExtResource("gw_compat_1"), ExtResource("gw_compat_2"), ExtResource("gw_compat_3"), ExtResource("gw_compat_4"), ExtResource("gw_compat_5"), ExtResource("gw_compat_6")]
 slots = ["Primary"]
 material = null
 showCondition = true

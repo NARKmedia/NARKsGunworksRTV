@@ -1,7 +1,7 @@
 [mod]
 id="nark_firearms"
 name="NARK's Gunworks"
-version="1.1"
+version="1.2"
 author="NARK"
 description="Custom weapons, magazines and attachments assembled with NARK VosModel."
 priority=970

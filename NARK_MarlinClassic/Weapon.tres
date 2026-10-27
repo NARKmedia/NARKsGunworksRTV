@@ -6,6 +6,14 @@
 [ext_resource type="Script" path="res://Scripts/WeaponData.gd" id="10"]
 [ext_resource type="PackedScene" path="res://Items/Weapons/Mosin/Mosin_7x2.tscn" id="13"]
 
+[ext_resource type="Resource" path="res://Items/Attachments/Monster/Monster.tres" id="gw_compat_0"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/Thor/Thor.tres" id="gw_compat_1"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/SOCOM/SOCOM.tres" id="gw_compat_2"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/Hybrid/Hybrid.tres" id="gw_compat_3"]
+
 [ext_resource type="Texture2D" path="res://NARK_MarlinClassic/Assets/Icon.res" id="gw_icon"]
 
 [ext_resource type="PackedScene" path="res://NARK_MarlinClassic/Inventory.tscn" id="gw_tetris"]
@@ -71,7 +79,7 @@ icon = ExtResource("gw_icon")
 tetris = ExtResource("gw_tetris")
 size = Vector2(7, 2)
 audio = null
-compatible = []
+compatible = [ExtResource("gw_compat_0"), ExtResource("gw_compat_1"), ExtResource("gw_compat_2"), ExtResource("gw_compat_3")]
 slots = ["Primary"]
 material = null
 showCondition = true

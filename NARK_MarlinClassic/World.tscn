@@ -5,6 +5,12 @@
 [ext_resource type="ArrayMesh" path="res://NARK_MarlinClassic/Assets/World.mesh" id="mesh"]
 [ext_resource type="Material" path="res://NARK_MarlinClassic/Material.tres" id="mat"]
 [ext_resource type="PhysicsMaterial" path="res://Items/Physics/Item_Physics.tres" id="physics"]
+[ext_resource type="Script" path="res://NARK_Firearms/LibraryPickup.gd" id="gw_pickup"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Monster/Monster_Static.tscn" id="gw_0"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Thor/Thor_Static.tscn" id="gw_1"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/SOCOM/SOCOM_Static.tscn" id="gw_2"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Hybrid/Hybrid_Static.tscn" id="gw_3"]
+
 [sub_resource type="Resource" id="Slot"]
 resource_local_to_scene = true
 script = ExtResource("slot")
@@ -15,7 +21,7 @@ size = Vector3(0.03834455646574497, 0.24610023945569992, 1.3279497027397156)
 collision_layer = 4
 collision_mask = 29
 physics_material_override = ExtResource("physics")
-script = ExtResource("pickup")
+script = ExtResource("gw_pickup")
 slotData = SubResource("Slot")
 mesh = NodePath("LOD0")
 collision = NodePath("Collision")
@@ -26,3 +32,21 @@ surface_material_override/0 = ExtResource("mat")
 [node name="Collision" type="CollisionShape3D" parent="."]
 position = Vector3(-0.0011486643925309181, -0.09250782802700996, 0.09644809365272522)
 shape = SubResource("Shape")
+
+[node name="Attachments" type="Node3D" parent="."]
+
+[node name="Monster" parent="Attachments" instance=ExtResource("gw_0")]
+visible = false
+transform = Transform3D(1.16866755485535, 0.0, 1.4224935234017124e-14, -0.0, 1.16866755485535, 0.0, -1.4224935234017124e-14, -0.0, 1.16866755485535, -0.00114883109927177, 0.00136895105242729, 0.758064866065979)
+
+[node name="Thor" parent="Attachments" instance=ExtResource("gw_1")]
+visible = false
+transform = Transform3D(1.16866755485535, 0.0, 1.4224935234017124e-14, -0.0, 1.16866755485535, 0.0, -1.4224935234017124e-14, -0.0, 1.16866755485535, -0.00114883540663868, 0.00088047981262207, 0.758094310760498)
+
+[node name="SOCOM" parent="Attachments" instance=ExtResource("gw_2")]
+visible = false
+transform = Transform3D(1.16866755485535, 0.0, 1.4224935234017124e-14, -0.0, 1.16866755485535, 0.0, -1.4224935234017124e-14, -0.0, 1.16866755485535, -0.00114883109927177, 0.00113599933683872, 0.756154656410217)
+
+[node name="Hybrid" parent="Attachments" instance=ExtResource("gw_3")]
+visible = false
+transform = Transform3D(1.16866755485535, 0.0, 1.4224935234017124e-14, -0.0, 1.16866755485535, 0.0, -1.4224935234017124e-14, -0.0, 1.16866755485535, -0.00128389790188521, 0.00178920477628708, 0.756646513938904)

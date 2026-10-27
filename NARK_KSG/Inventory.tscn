@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" path="res://Items/Attachments/Micro/Micro_1x1.tscn" id="overlay_3"]
 [ext_resource type="PackedScene" path="res://NARK_Firearms/NDm_1x1.tscn" id="overlay_4"]
 [ext_resource type="PackedScene" path="res://Items/Attachments/PRO/PRO_2x1.tscn" id="overlay_6"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Salvo/Salvo_3x1.tscn" id="overlay_7"]
 
 [node name="NARK_KSG" type="Sprite2D"]
 material = ExtResource("item")
@@ -51,5 +52,12 @@ show_behind_parent = false
 visible = false
 position = Vector2(128.0, -101.7)
 scale = Vector2(0.8, 0.8)
+rotation = 0.0
+show_behind_parent = false
+
+[node name="Salvo" parent="." instance=ExtResource("overlay_7")]
+visible = false
+position = Vector2(403.5, -37.8)
+scale = Vector2(0.9, 0.9)
 rotation = 0.0
 show_behind_parent = false
