@@ -19,6 +19,10 @@
 [ext_resource type="Resource" path="res://Audio/Effects/Tails/Tail_Pistol_Outdoor_SD.tres" id="19"]
 [ext_resource type="PackedScene" path="res://NARK_Firearms/Beretta92FS/Beretta92FS_3x2.tscn" id="20"]
 
+[ext_resource type="Resource" path="res://NARK_Firearms/Beretta92FS/Beretta92FS_Magazine.tres" id="gw_compat_0"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/Rider/Rider.tres" id="gw_compat_1"]
+
 [resource]
 script = ExtResource("15")
 weaponType = "Pistol"
@@ -42,19 +46,19 @@ tailIndoorSuppressed = ExtResource("17")
 tailOutdoorSuppressed = ExtResource("19")
 ammo = ExtResource("1")
 caliber = "9×19"
-casing = 1
+casing = 1.0
 damage = 25.0
-penetration = 1
+penetration = 1.0
 fireRate = 0.08
 magazineSize = 15
 kick = 0.04
 kickPower = 20.0
 kickRecovery = 24.0
-verticalRecoil = 0.20
+verticalRecoil = 0.2
 horizontalRecoil = 0.014
 rotationPower = 20.0
 rotationRecovery = 24.0
-slideDirection = 2
+slideDirection = 2.0
 slideMovement = -0.035
 slideSpeed = 2.0
 slideLock = true
@@ -77,7 +81,7 @@ display = "92FS"
 type = "Weapon"
 subtype = "Pistol"
 weight = 0.95
-value = 765
+value = 765.0
 icon = ExtResource("9")
 tetris = ExtResource("20")
 size = Vector2(3, 2)
@@ -92,7 +96,7 @@ opticSuppressorOffset = Vector2(-35, -5)
 fullyModdedScale = 0.35
 fullyModdedOffset = Vector2(-35, -5)
 audio = null
-compatible = [ExtResource("3"), ExtResource("4")]
+compatible = [ExtResource("gw_compat_0"), ExtResource("gw_compat_1")]
 slots = ["Primary", "Secondary"]
 material = null
 showCondition = true
@@ -103,7 +107,7 @@ gunsmith = true
 hunter = false
 orientation = 90.0
 wallOffset = 0.025
-rarity = 0
+rarity = 0.0
 industrial = false
 generalist = true
 doctor = false

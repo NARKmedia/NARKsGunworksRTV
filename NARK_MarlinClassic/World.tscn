@@ -1,0 +1,28 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://Scripts/Pickup.gd" id="pickup"]
+[ext_resource type="Script" path="res://Scripts/SlotData.gd" id="slot"]
+[ext_resource type="Resource" path="res://NARK_MarlinClassic/Weapon.tres" id="item"]
+[ext_resource type="ArrayMesh" path="res://NARK_MarlinClassic/Assets/World.mesh" id="mesh"]
+[ext_resource type="Material" path="res://NARK_MarlinClassic/Material.tres" id="mat"]
+[ext_resource type="PhysicsMaterial" path="res://Items/Physics/Item_Physics.tres" id="physics"]
+[sub_resource type="Resource" id="Slot"]
+resource_local_to_scene = true
+script = ExtResource("slot")
+itemData = ExtResource("item")
+[sub_resource type="BoxShape3D" id="Shape"]
+size = Vector3(0.03834455646574497, 0.24610023945569992, 1.3279497027397156)
+[node name="NARK_MarlinClassic" type="RigidBody3D" node_paths=PackedStringArray("mesh", "collision") groups=["Item"]]
+collision_layer = 4
+collision_mask = 29
+physics_material_override = ExtResource("physics")
+script = ExtResource("pickup")
+slotData = SubResource("Slot")
+mesh = NodePath("LOD0")
+collision = NodePath("Collision")
+[node name="LOD0" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("mesh")
+surface_material_override/0 = ExtResource("mat")
+[node name="Collision" type="CollisionShape3D" parent="."]
+position = Vector3(-0.0011486643925309181, -0.09250782802700996, 0.09644809365272522)
+shape = SubResource("Shape")

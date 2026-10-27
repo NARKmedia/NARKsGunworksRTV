@@ -1,0 +1,98 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Resource" path="res://Items/Ammo/Ammo_308/Ammo_308.tres" id="1"]
+[ext_resource type="Resource" path="res://Items/Attachments/PU/PU.tres" id="3"]
+[ext_resource type="Texture2D" path="res://Items/Weapons/Mosin/Files/Icon_Mosin.png" id="5"]
+[ext_resource type="Script" path="res://Scripts/WeaponData.gd" id="10"]
+[ext_resource type="PackedScene" path="res://Items/Weapons/Mosin/Mosin_7x2.tscn" id="13"]
+
+[ext_resource type="Texture2D" path="res://NARK_MarlinClassic/Assets/Icon.res" id="gw_icon"]
+
+[ext_resource type="PackedScene" path="res://NARK_MarlinClassic/Inventory.tscn" id="gw_tetris"]
+
+[resource]
+script = ExtResource("10")
+weaponType = "Rifle"
+weaponAction = "Manual"
+fireSemi = null
+fireAuto = null
+fireSuppressed = null
+reloadEmpty = null
+reloadTactical = null
+magazineAttachEmpty = null
+magazineAttachTactical = null
+magazineDetach = null
+ammoCheck = null
+tailOutdoor = null
+reload = null
+insertStart = null
+insertEnd = null
+insert = null
+tailIndoor = null
+tailIndoorSuppressed = null
+tailOutdoorSuppressed = null
+ammo = ExtResource("1")
+caliber = ".308"
+casing = 2.0
+damage = 42.0
+penetration = 4.0
+fireRate = 0.11
+magazineSize = 5
+kick = 0.33
+kickPower = 25.0
+kickRecovery = 22.0
+verticalRecoil = 0.24
+horizontalRecoil = 0.12
+rotationPower = 33.0
+rotationRecovery = 18.0
+slideMovement = 0.1
+slideSpeed = 50.0
+lowPosition = Vector3(0, -0.14, -0.35)
+lowRotation = Vector3(15, 15, 0)
+highPosition = Vector3(0.05, -0.05, -0.35)
+aimPosition = Vector3(0, -0.026, -0.32)
+cantedPosition = Vector3(0, -0.05, -0.3)
+cantedRotation = Vector3(0, 0, -35)
+inspectPosition = Vector3(0, -0.05, -0.3)
+inspectRotation = Vector3(0, 0, 5)
+collisionPosition = Vector3(0.03, -0.2, -0.26)
+collisionRotation = Vector3(40, 15, 0)
+file = "NARK_MarlinClassic"
+name = "Marlin Classic"
+inventory = "Marlin"
+rotated = "Marlin"
+equipment = "Marlin"
+display = "Marlin"
+type = "Weapon"
+subtype = "Bolt"
+weight = 3.8
+value = 525.0
+icon = ExtResource("gw_icon")
+tetris = ExtResource("gw_tetris")
+size = Vector2(7, 2)
+audio = null
+compatible = []
+slots = ["Primary"]
+material = null
+showCondition = true
+maxAmount = 5
+repairs = true
+civilian = false
+military = true
+generalist = false
+gunsmith = false
+hunter = true
+orientation = 90.0
+wallOffset = 0.04
+
+hammerLock = true
+
+doctor = false
+
+driver = false
+
+grandma = false
+
+industrial = false
+
+rarity = 1.0

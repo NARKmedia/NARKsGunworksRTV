@@ -21,6 +21,12 @@
 
 [ext_resource type="Resource" path="res://NARK_Firearms/NDm.tres" id="ndm"]
 
+[ext_resource type="Resource" path="res://NARK_Firearms/M45A1_Magazine.tres" id="gw_compat_0"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/Rider/Rider.tres" id="gw_compat_1"]
+
+[ext_resource type="Resource" path="res://NARK_Firearms/NDm.tres" id="gw_compat_2"]
+
 [resource]
 script = ExtResource("13")
 weaponType = "Pistol"
@@ -44,9 +50,9 @@ tailIndoorSuppressed = ExtResource("15")
 tailOutdoorSuppressed = ExtResource("17")
 ammo = ExtResource("1")
 caliber = ".45 ACP"
-casing = 1
+casing = 1.0
 damage = 25.0
-penetration = 1
+penetration = 1.0
 fireRate = 0.08
 magazineSize = 8
 kick = 0.05
@@ -56,7 +62,7 @@ verticalRecoil = 0.25
 horizontalRecoil = 0.02
 rotationPower = 20.0
 rotationRecovery = 20.0
-slideDirection = 2
+slideDirection = 2.0
 slideMovement = -0.04
 slideSpeed = 2.0
 slideLock = true
@@ -79,7 +85,7 @@ display = "M45A1"
 type = "Weapon"
 subtype = "Pistol"
 weight = 1.1
-value = 825
+value = 825.0
 icon = ExtResource("7")
 tetris = ExtResource("18")
 size = Vector2(3, 2)
@@ -88,7 +94,7 @@ suppressorOffset = -30.0
 magazineSuppressorScale = 0.4
 magazineSuppressorOffset = Vector2(-30, 0)
 audio = null
-compatible = [ExtResource("3"), ExtResource("4"), ExtResource("ndm")]
+compatible = [ExtResource("gw_compat_0"), ExtResource("gw_compat_1"), ExtResource("gw_compat_2")]
 slots = ["Primary", "Secondary"]
 material = null
 showCondition = true
@@ -100,4 +106,4 @@ gunsmith = true
 hunter = false
 orientation = 90.0
 wallOffset = 0.02
-rarity = 0
+rarity = 0.0

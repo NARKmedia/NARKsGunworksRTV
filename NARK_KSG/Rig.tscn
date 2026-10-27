@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://Items/Weapons/Mosin/Mosin_Rig.tscn" id="1"]
+[ext_resource type="Script" path="res://NARK_KSG/Rig.gd" id="2"]
+[ext_resource type="Resource" path="res://NARK_KSG/Weapon.tres" id="3"]
+
+[ext_resource type="Script" path="res://NARK_Firearms/AdsHandling.gd" id="vm_ads"]
+
+[node name="NARK_KSG_Rig" instance=ExtResource("1")]
+script = ExtResource("2")
+data = ExtResource("3")
+dynamicSlide = false
+dynamicSelector = false
+dynamicHammer = false
+
+[node name="Handling" parent="." index="0"]
+script = ExtResource("vm_ads")
+ads_position = Vector3(-0.00100000000000001, 0.00100000000000001, 0.0)
+ads_rotation = Vector3(0.0, 0.0, 0.0)

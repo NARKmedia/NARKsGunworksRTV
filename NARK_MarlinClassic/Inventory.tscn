@@ -1,0 +1,7 @@
+[gd_scene format=3]
+[ext_resource type="Material" path="res://UI/Effects/MT_Item.tres" id="item"]
+[ext_resource type="Texture2D" path="res://NARK_MarlinClassic/Assets/Icon.res" id="icon"]
+
+[node name="NARK_MarlinClassic" type="Sprite2D"]
+material = ExtResource("item")
+texture = ExtResource("icon")

@@ -1,0 +1,62 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://Scripts/Pickup.gd" id="pickup"]
+[ext_resource type="Script" path="res://Scripts/SlotData.gd" id="slot"]
+[ext_resource type="Resource" path="res://NARK_KSG/Weapon.tres" id="item"]
+[ext_resource type="ArrayMesh" path="res://NARK_KSG/Assets/World.mesh" id="mesh"]
+[ext_resource type="Material" path="res://NARK_KSG/Material.tres" id="mat"]
+[ext_resource type="PhysicsMaterial" path="res://Items/Physics/Item_Physics.tres" id="physics"]
+[ext_resource type="Script" path="res://NARK_Firearms/LibraryPickup.gd" id="gw_pickup"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/EXPS/EXPS_Static.tscn" id="gw_0"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/MRO/MRO_Static.tscn" id="gw_1"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/PRO/PRO_Static.tscn" id="gw_2"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Kobra/Kobra_Static.tscn" id="gw_3"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Micro/Micro_Static.tscn" id="gw_4"]
+[ext_resource type="PackedScene" path="res://NARK_Firearms/NDm_Static.tscn" id="gw_5"]
+
+[sub_resource type="Resource" id="Slot"]
+resource_local_to_scene = true
+script = ExtResource("slot")
+itemData = ExtResource("item")
+[sub_resource type="BoxShape3D" id="Shape"]
+size = Vector3(0.05929190665483475, 0.2171217016875744, 0.6817773580551147)
+[node name="NARK_KSG" type="RigidBody3D" node_paths=PackedStringArray("mesh", "collision") groups=["Item"]]
+collision_layer = 4
+collision_mask = 29
+physics_material_override = ExtResource("physics")
+script = ExtResource("gw_pickup")
+slotData = SubResource("Slot")
+mesh = NodePath("LOD0")
+collision = NodePath("Collision")
+[node name="LOD0" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("mesh")
+surface_material_override/0 = ExtResource("mat")
+[node name="Collision" type="CollisionShape3D" parent="."]
+position = Vector3(-0.0011485759168863297, -0.08127523399889469, -0.06966936588287354)
+shape = SubResource("Shape")
+
+[node name="Attachments" type="Node3D" parent="."]
+
+[node name="EXPS" parent="Attachments" instance=ExtResource("gw_0")]
+visible = false
+transform = Transform3D(1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, -0.00114882364869118, 0.0528367422521114, 0.054425448179245)
+
+[node name="MRO" parent="Attachments" instance=ExtResource("gw_1")]
+visible = false
+transform = Transform3D(1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, -0.00114882364869118, 0.0313207432627678, 0.0555934906005859)
+
+[node name="PRO" parent="Attachments" instance=ExtResource("gw_2")]
+visible = false
+transform = Transform3D(1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, -0.00114882364869118, 0.0574502684175968, 0.0603969395160675)
+
+[node name="Kobra" parent="Attachments" instance=ExtResource("gw_3")]
+visible = false
+transform = Transform3D(1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, -0.00114882364869118, 0.0577443651854992, 0.0780777037143707)
+
+[node name="Micro" parent="Attachments" instance=ExtResource("gw_4")]
+visible = false
+transform = Transform3D(1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, -0.00114882364869118, 0.0229833051562309, 0.0569218695163727)
+
+[node name="NARK_NDm_Laser" parent="Attachments" instance=ExtResource("gw_5")]
+visible = false
+transform = Transform3D(1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, 0.0, 0.0, 0.0, 1.20120012760162, -0.0008704952779226, -0.0800997763872147, 0.224914312362671)
