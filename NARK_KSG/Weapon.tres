@@ -108,3 +108,17 @@ grandma = false
 industrial = false
 
 rarity = 2.0
+fullyModdedOffset = Vector2(-49.6142501831055, -9.94238185882568)
+fullyModdedScale = 0.390663390663391
+magazineOffset = 0.0
+magazineOpticOffset = -12.7249984741211
+magazineOpticScale = 0.5
+magazineScale = 0.5
+magazineSuppressorOffset = Vector2(-49.6142501831055, 0.0)
+magazineSuppressorScale = 0.390663390663391
+opticOffset = -12.7249984741211
+opticScale = 0.5
+opticSuppressorOffset = Vector2(-49.6142501831055, -9.94238185882568)
+opticSuppressorScale = 0.390663390663391
+suppressorOffset = -49.6142501831055
+suppressorScale = 0.390663390663391

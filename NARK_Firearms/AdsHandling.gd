@@ -15,6 +15,9 @@ func _ready():
 func _vm_ads_basis() -> Basis:
  return _ads_basis
 
+func _vm_ads_transform() -> Transform3D:
+ return Transform3D(_ads_basis,Vector3(-ads_position.x,ads_position.y,-ads_position.z))
+
 func WeaponHandling(delta):
  super.WeaponHandling(delta)
  if _vm_vostac:return

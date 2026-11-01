@@ -34,7 +34,7 @@ func configure(rig,model,items):
   _cache.append({"sk":sk,"bone":bone,"bind":bind,"offset":offset,"node":node,"subtype":item.subtype})
  update_nodes()
  var handling=rig.get_node("Handling")
- var aim_basis=handling._vm_ads_basis() if handling.has_method("_vm_ads_basis") else Basis.IDENTITY
+ var aim_pose=handling._vm_ads_transform() if handling.has_method("_vm_ads_transform") else Transform3D.IDENTITY
  for entry in _cache:
   if entry.subtype=="Optic":
    var rail_min=entry.node.minPosition-entry.node.defaultPosition
@@ -44,7 +44,7 @@ func configure(rig,model,items):
     entry.node.minPosition=entry.node.defaultPosition+rail_min
     entry.node.maxPosition=entry.node.defaultPosition+rail_max
    var pose=model.global_transform.affine_inverse()*entry.node.global_transform
-   pose=Transform3D(aim_basis,Vector3.ZERO)*pose
+   pose=aim_pose*pose
    var secondary=entry.node.get("secondary")
    _rig._vm_optic_aim[str(entry.node.name)]={"height":pose.origin.y,"secondary_height":(pose.basis*secondary.position).y if secondary!=null else 0.0}
 
