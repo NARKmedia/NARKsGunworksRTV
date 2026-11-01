@@ -29,6 +29,8 @@ func _ready():
   lib.register("scenes",entry.id,load(entry.world))
   if entry.get("rig","")!="":lib.register("scenes",entry.id+"_Rig",load(entry.rig))
   lib.register("loot",entry.id+"_Master",{"item":item,"table":"LT_Master"})
+ for entry in manifest.get("repairs",[]):
+  lib.register("recipes",entry.id,{"recipe":load(entry.path),"category":"weapons"})
  if manifest.get("legacy_script","")!="":
   _legacy=load(manifest.legacy_script).new();add_child(_legacy);_legacy._lib=lib;_legacy.configure_magazines()
 
