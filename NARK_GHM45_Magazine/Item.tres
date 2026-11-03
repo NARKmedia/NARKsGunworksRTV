@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Script" path="res://Scripts/ItemData.gd" id="script"]
+
+[ext_resource type="Resource" path="res://Items/Ammo/Ammo_45ACP/Ammo_45ACP.tres" id="ammo"]
+
+[ext_resource type="Texture2D" path="res://NARK_GHM45_Magazine/Assets/Icon.res" id="icon"]
+
+[ext_resource type="PackedScene" path="res://NARK_GHM45_Magazine/Inventory.tscn" id="tetris"]
+
+[ext_resource type="Texture2D" path="res://NARK_GHM45_Magazine/Assets/Icon.res" id="gw_icon"]
+
+[ext_resource type="PackedScene" path="res://NARK_GHM45_Magazine/Inventory.tscn" id="gw_tetris"]
+
+[resource]
+script = ExtResource("script")
+file = "NARK_GHM45_Magazine"
+name = "GHM45 Magazine"
+inventory = "GHM45 Magazine"
+rotated = "GHM45 Magazine"
+equipment = "GHM45 Magazine"
+display = "GHM45 Magazine"
+type = "Attachment"
+subtype = "Magazine"
+civilian = false
+doctor = false
+driver = false
+generalist = false
+grandma = false
+gunsmith = true
+hunter = false
+industrial = false
+maxAmount = 25
+military = true
+rarity = 1.0
+value = 245.0
+weight = 0.2
+compatible = [ExtResource("ammo")]
+showAmount = true
+defaultAmount = 25
+icon = ExtResource("gw_icon")
+tetris = ExtResource("gw_tetris")
+size = Vector2(1, 2)

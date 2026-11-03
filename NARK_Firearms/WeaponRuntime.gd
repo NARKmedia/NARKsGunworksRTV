@@ -11,6 +11,7 @@ var _vm_native_sounds: Dictionary = {}
 var _vm_voice_index = 0
 var _vm_states
 var _vm_sights
+var _vm_magazines
 var _vm_optic_aim:Dictionary={}
 var _vm_vostac
 
@@ -91,6 +92,9 @@ func _ready():
    if event.type == "part_state":
     clip.track_insert_key(track,min(float(event.frame)/60.0,clip.length),{"method": &"_vm_part_action", "args": [event.kind,event.state,float(event.get("duration",0)),event.slot,str(event.kind)+":"+str(event.frame)]})
     continue
+   if event.type=="mag_rounds":
+    clip.track_insert_key(track,min(float(event.frame)/60.0,clip.length),{"method": &"_vm_magazine_swap","args":[]})
+    continue
    var method = &"CasingEject" if event.type=="eject" else &"_vm_sound"
    var args = [event.file] if event.type=="sound" else []
    clip.track_insert_key(track, min(float(event.frame) / 60.0,clip.length), {"method": method, "args": args})
@@ -116,6 +120,7 @@ func _ready():
  if _vm_states!=null:_vm_states.configure(self,_vm_config.game_parts,_vm_config.events)
  if _vm_config.get("library_mounts",[]).any(func(m):return m.subtype=="Magazine"):
   var visuals=load("res://NARK_Firearms/LibraryMagazines.gd").new()
+  _vm_magazines=visuals
   add_child(visuals);visuals.configure(self,model,_vm_config.library_mounts,_vm_config.get("imported_magazine_id",""))
 
 func _vm_vostac_active() -> bool:
@@ -199,16 +204,19 @@ func PlayMagazineAttachTactical():
  pass
 
 func PlayMagazineDetach():
- pass
+ if _vm_magazines!=null:_vm_magazines.start_transition("Magazine_Detach")
 
 func PlayAmmoCheck():
  pass
 
 func PlayReloadEmpty():
- pass
+ if _vm_magazines!=null:_vm_magazines.start_transition("Reload_Empty")
 
 func PlayReloadTactical():
- pass
+ if _vm_magazines!=null:_vm_magazines.start_transition("Reload_Tactical")
+
+func _vm_magazine_swap():
+ if _vm_magazines!=null:_vm_magazines.swap_rounds()
 
 func PlayInsertStart():
  pass

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RecipeData" format=3]
+
+[ext_resource type="Script" path="res://Scripts/RecipeData.gd" id="script"]
+[ext_resource type="Resource" path="res://NARK_GHM45/Weapon.tres" id="weapon"]
+[ext_resource type="Resource" path="res://Items/Misc/Weapon_Repair_Kit/Weapon_Repair_Kit.tres" id="kit"]
+[ext_resource type="Resource" path="res://Audio/UI/UI_Craft_Metal.tres" id="audio"]
+
+[resource]
+script = ExtResource("script")
+name = "GHM45 Repair"
+time = 10.0
+audio = ExtResource("audio")
+input = [ExtResource("weapon"), ExtResource("kit")]
+output = [ExtResource("weapon")]
+repair = true

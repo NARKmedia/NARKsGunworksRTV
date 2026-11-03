@@ -1,0 +1,8 @@
+[gd_scene format=3]
+[ext_resource type="ArrayMesh" path="res://NARK_GHM45_Magazine/Assets/Asset.mesh" id="mesh"]
+[ext_resource type="Material" path="res://NARK_GHM45_Magazine/Material.tres" id="mat"]
+[node name="NARK_GHM45_Magazine" type="Node3D"]
+[node name="Mesh" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("mesh")
+surface_material_override/0 = ExtResource("mat")

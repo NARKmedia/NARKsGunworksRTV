@@ -1,0 +1,14 @@
+[gd_scene format=3]
+[ext_resource type="Material" path="res://UI/Effects/MT_Item.tres" id="item"]
+[ext_resource type="Texture2D" path="res://NARK_GHM45_Magazine/Assets/Icon.res" id="icon"]
+[ext_resource type="PackedScene" path="res://Items/Ammo/Cartridges/Cartridge_Pistol_Side_1x1.tscn" id="round"]
+
+[node name="NARK_GHM45_Magazine" type="Sprite2D"]
+material = ExtResource("item")
+texture = ExtResource("icon")
+
+[node name="Cartridge" parent="." instance=ExtResource("round")]
+position = Vector2(-3.1, -116.7)
+scale = Vector2(0.7, 0.7)
+rotation = 0.0
+show_behind_parent = true

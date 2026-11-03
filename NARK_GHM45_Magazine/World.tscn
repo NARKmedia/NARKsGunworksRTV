@@ -1,0 +1,30 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://Scripts/Pickup.gd" id="pickup"]
+[ext_resource type="Script" path="res://Scripts/SlotData.gd" id="slot"]
+[ext_resource type="Resource" path="res://NARK_GHM45_Magazine/Item.tres" id="item"]
+[ext_resource type="ArrayMesh" path="res://NARK_GHM45_Magazine/Assets/Asset.mesh" id="mesh"]
+[ext_resource type="Material" path="res://NARK_GHM45_Magazine/Material.tres" id="mat"]
+[ext_resource type="PhysicsMaterial" path="res://Items/Physics/Item_Physics.tres" id="physics"]
+[ext_resource type="PackedScene" path="res://NARK_GHM45_Magazine/Rounds.tscn" id="rounds"]
+[sub_resource type="Resource" id="Slot"]
+resource_local_to_scene = true
+script = ExtResource("slot")
+itemData = ExtResource("item")
+[sub_resource type="BoxShape3D" id="Shape"]
+size = Vector3(0.0194215811789036, 0.165917560458183, 0.0434803813695908)
+[node name="NARK_GHM45_Magazine" type="RigidBody3D" node_paths=PackedStringArray("mesh", "collision") groups=["Item"]]
+collision_layer = 4
+collision_mask = 29
+physics_material_override = ExtResource("physics")
+script = ExtResource("pickup")
+slotData = SubResource("Slot")
+mesh = NodePath("LOD0")
+collision = NodePath("Collision")
+[node name="LOD0" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("mesh")
+surface_material_override/0 = ExtResource("mat")
+[node name="Collision" type="CollisionShape3D" parent="."]
+position = Vector3(-4.5169144867983346e-07, -0.0429649129509925, 0.005072832107544001)
+shape = SubResource("Shape")
+[node name="Bullets" parent="." instance=ExtResource("rounds")]

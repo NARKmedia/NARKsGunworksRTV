@@ -1,0 +1,158 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Resource" path="res://Items/Ammo/Ammo_45ACP/Ammo_45ACP.tres" id="1"]
+[ext_resource type="Resource" path="res://Items/Weapons/AK-12/AK-12_Magazine.tres" id="3"]
+[ext_resource type="Resource" path="res://Items/Attachments/ACOG/ACOG.tres" id="4"]
+[ext_resource type="Resource" path="res://Items/Attachments/EXPS/EXPS.tres" id="5"]
+[ext_resource type="Resource" path="res://Items/Attachments/HMR/HMR.tres" id="6"]
+[ext_resource type="Resource" path="res://Items/Attachments/Kobra/Kobra.tres" id="7"]
+[ext_resource type="Resource" path="res://Items/Attachments/Leopard/Leopard.tres" id="8"]
+[ext_resource type="Resource" path="res://Items/Attachments/Micro/Micro.tres" id="9"]
+[ext_resource type="Resource" path="res://Items/Attachments/MRO/MRO.tres" id="10"]
+[ext_resource type="Resource" path="res://Items/Attachments/OZ5/OZ5.tres" id="11"]
+[ext_resource type="Resource" path="res://Items/Attachments/PBS/PBS.tres" id="12"]
+[ext_resource type="Resource" path="res://Items/Attachments/PRO/PRO.tres" id="13"]
+[ext_resource type="Resource" path="res://Items/Attachments/PTN/PTN.tres" id="14"]
+[ext_resource type="Resource" path="res://Items/Attachments/Vudu/Vudu.tres" id="15"]
+[ext_resource type="Resource" path="res://Items/Attachments/ANPEQ/ANPEQ.tres" id="16"]
+[ext_resource type="Texture2D" path="res://Items/Weapons/AK-12/Files/Icon_AK-12.png" id="20"]
+[ext_resource type="Script" path="res://Scripts/WeaponData.gd" id="26"]
+[ext_resource type="PackedScene" path="res://Items/Weapons/AK-12/AK-12_6x2.tscn" id="31"]
+
+[ext_resource type="Resource" path="res://NARK_GHM45_Magazine/Item.tres" id="gw_compat_0"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/EXPS/EXPS.tres" id="gw_compat_1"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/Rider/Rider.tres" id="gw_compat_2"]
+
+[ext_resource type="Resource" path="res://NARK_Firearms/NDm.tres" id="gw_compat_3"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/ACOG/ACOG.tres" id="gw_compat_4"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/HMR/HMR.tres" id="gw_compat_5"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/Hybrid/Hybrid.tres" id="gw_compat_6"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/Kobra/Kobra.tres" id="gw_compat_7"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/Micro/Micro.tres" id="gw_compat_8"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/MRO/MRO.tres" id="gw_compat_9"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/OZ5/OZ5.tres" id="gw_compat_10"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/PRO/PRO.tres" id="gw_compat_11"]
+
+[ext_resource type="Texture2D" path="res://NARK_GHM45/Assets/Icon.res" id="gw_icon"]
+
+[ext_resource type="PackedScene" path="res://NARK_GHM45/Inventory.tscn" id="gw_tetris"]
+
+[resource]
+script = ExtResource("26")
+weaponType = "Pistol"
+weaponAction = "Semi-Auto"
+fireSemi = null
+fireAuto = null
+fireSuppressed = null
+reloadEmpty = null
+reloadTactical = null
+magazineAttachEmpty = null
+magazineAttachTactical = null
+magazineDetach = null
+ammoCheck = null
+tailOutdoor = null
+reload = null
+insertStart = null
+insertEnd = null
+insert = null
+tailIndoor = null
+tailIndoorSuppressed = null
+tailOutdoorSuppressed = null
+ammo = ExtResource("1")
+caliber = ".45 ACP"
+casing = 1.0
+damage = 28.0
+penetration = 2.0
+fireRate = 0.09
+magazineSize = 25
+kick = 0.06
+kickPower = 33.0
+kickRecovery = 12.0
+verticalRecoil = 0.09
+horizontalRecoil = 0.05
+rotationPower = 23.0
+rotationRecovery = 23.0
+slideDirection = 2
+slideMovement = -0.1
+slideSpeed = 2.0
+selectorRotation = Vector2(5, -5)
+lowPosition = Vector3(0.03, -0.1, -0.16)
+lowRotation = Vector3(15, 20, 0)
+highPosition = Vector3(0.05, -0.06, -0.14)
+aimPosition = Vector3(0, -0.051, -0.12)
+cantedPosition = Vector3(0, -0.075, -0.15)
+cantedRotation = Vector3(0, 0, -45)
+inspectPosition = Vector3(0, -0.1, -0.1)
+inspectRotation = Vector3(-6, 0, 5)
+collisionPosition = Vector3(0.03, -0.15, -0.12)
+collisionRotation = Vector3(45, 15, 0)
+file = "NARK_GHM45"
+name = "GHM45"
+inventory = "GHM45"
+rotated = "GHM45"
+equipment = "GHM45"
+display = "GHM45"
+type = "Weapon"
+subtype = "Rifle"
+weight = 3.0
+value = 1900.0
+icon = ExtResource("gw_icon")
+tetris = ExtResource("gw_tetris")
+size = Vector2(3, 2)
+magazineOffset = 14.4714698791504
+opticOffset = -12.4500007629395
+suppressorOffset = -25.6045322418213
+magazineSuppressorOffset = Vector2(-25.6045322418213, 11.5431537628174)
+opticSuppressorOffset = Vector2(-25.6045322418213, -9.93073081970215)
+fullyModdedOffset = Vector2(-25.6045322418213, 1.61242294311523)
+audio = null
+compatible = [ExtResource("gw_compat_0"), ExtResource("gw_compat_1"), ExtResource("gw_compat_2"), ExtResource("gw_compat_3"), ExtResource("gw_compat_4"), ExtResource("gw_compat_5"), ExtResource("gw_compat_6"), ExtResource("gw_compat_7"), ExtResource("gw_compat_8"), ExtResource("gw_compat_9"), ExtResource("gw_compat_10"), ExtResource("gw_compat_11")]
+slots = ["Primary"]
+material = null
+showCondition = true
+repairs = true
+military = true
+orientation = 90.0
+wallOffset = 0.04
+
+slideLock = true
+
+civilian = false
+
+doctor = false
+
+driver = false
+
+generalist = false
+
+grandma = false
+
+gunsmith = true
+
+hunter = false
+
+industrial = false
+
+maxAmount = 25
+
+rarity = 1.0
+
+slots = ["Primary", "Secondary"]
+fullyModdedScale = 0.398824522322065
+magazineOpticOffset = 2.02146911621094
+magazineOpticScale = 0.5
+magazineScale = 0.5
+magazineSuppressorScale = 0.398824522322065
+opticScale = 0.5
+opticSuppressorScale = 0.398824522322065
+suppressorScale = 0.398824522322065

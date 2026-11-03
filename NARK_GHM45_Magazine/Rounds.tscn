@@ -1,0 +1,13 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://Items/Ammo/Cartridges/Cartridge_Pistol.tscn" id="round"]
+[node name="Bullets" type="Node3D"]
+[node name="Second" parent="." instance=ExtResource("round")]
+visible = false
+position = Vector3(0.00238452106714249, 0.0299938675016165, -0.00580017268657684)
+rotation = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(0.75, 0.75, 0.75)
+[node name="Top" parent="." instance=ExtResource("round")]
+visible = false
+position = Vector3(-0.00145446136593819, 0.0382839217782021, -0.00663901353254914)
+rotation = Vector3(0.0, 0.0, 0.0)
+scale = Vector3(0.75, 0.75, 0.75)
