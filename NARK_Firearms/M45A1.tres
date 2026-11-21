@@ -27,6 +27,8 @@
 
 [ext_resource type="Resource" path="res://NARK_Firearms/NDm.tres" id="gw_compat_2"]
 
+[ext_resource type="PackedScene" path="res://NARK_Firearms/LibraryIcons/NARK_M45A1/Inventory.tscn" id="gw_tetris"]
+
 [resource]
 script = ExtResource("13")
 weaponType = "Pistol"
@@ -87,7 +89,7 @@ subtype = "Pistol"
 weight = 1.1
 value = 825.0
 icon = ExtResource("7")
-tetris = ExtResource("18")
+tetris = ExtResource("gw_tetris")
 size = Vector2(3, 2)
 suppressorScale = 0.4
 suppressorOffset = -30.0

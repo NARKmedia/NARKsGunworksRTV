@@ -1,0 +1,112 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Resource" path="res://Items/Ammo/Ammo_12x70/Ammo_12x70.tres" id="1"]
+[ext_resource type="Resource" path="res://Items/Attachments/PU/PU.tres" id="3"]
+[ext_resource type="Texture2D" path="res://Items/Weapons/Mosin/Files/Icon_Mosin.png" id="5"]
+[ext_resource type="Script" path="res://Scripts/WeaponData.gd" id="10"]
+[ext_resource type="PackedScene" path="res://Items/Weapons/Mosin/Mosin_7x2.tscn" id="13"]
+
+[ext_resource type="Resource" path="res://Items/Attachments/Micro/Micro.tres" id="gw_compat_0"]
+
+[ext_resource type="Texture2D" path="res://NARK_StoegerCoach/Assets/Icon.res" id="gw_icon"]
+
+[ext_resource type="PackedScene" path="res://NARK_StoegerCoach/Inventory.tscn" id="gw_tetris"]
+
+[resource]
+script = ExtResource("10")
+weaponType = "Shotgun"
+weaponAction = "Manual"
+fireSemi = null
+fireAuto = null
+fireSuppressed = null
+reloadEmpty = null
+reloadTactical = null
+magazineAttachEmpty = null
+magazineAttachTactical = null
+magazineDetach = null
+ammoCheck = null
+tailOutdoor = null
+reload = null
+insertStart = null
+insertEnd = null
+insert = null
+tailIndoor = null
+tailIndoorSuppressed = null
+tailOutdoorSuppressed = null
+ammo = ExtResource("1")
+caliber = "12/70"
+casing = 0
+damage = 40.0
+penetration = 2.0
+fireRate = 0.3
+magazineSize = 2
+kick = 0.18
+kickPower = 31.0
+kickRecovery = 18.0
+verticalRecoil = 0.18
+horizontalRecoil = 0.03
+rotationPower = 24.0
+rotationRecovery = 18.0
+slideMovement = 0.1
+slideSpeed = 50.0
+lowPosition = Vector3(0, -0.14, -0.35)
+lowRotation = Vector3(15, 15, 0)
+highPosition = Vector3(0.05, -0.05, -0.35)
+aimPosition = Vector3(0, -0.026, -0.32)
+cantedPosition = Vector3(0, -0.05, -0.3)
+cantedRotation = Vector3(0, 0, -35)
+inspectPosition = Vector3(0, -0.05, -0.3)
+inspectRotation = Vector3(0, 0, 5)
+collisionPosition = Vector3(0.03, -0.2, -0.26)
+collisionRotation = Vector3(40, 15, 0)
+file = "NARK_StoegerCoach"
+name = "Stoeger Coach Gun"
+inventory = "Stoeger Coach Gun"
+rotated = "Stoeger Coach Gun"
+equipment = "Stoeger Coach Gun"
+display = "Stoeger Coach Gun"
+type = "Weapon"
+subtype = "Bolt"
+weight = 3.4
+value = 625.0
+icon = ExtResource("gw_icon")
+tetris = ExtResource("gw_tetris")
+size = Vector2(5, 2)
+audio = null
+compatible = [ExtResource("gw_compat_0")]
+slots = ["Primary"]
+material = null
+showCondition = true
+maxAmount = 2
+repairs = true
+civilian = false
+military = true
+generalist = true
+gunsmith = true
+hunter = true
+orientation = 90.0
+wallOffset = 0.04
+
+doctor = false
+
+driver = true
+
+grandma = false
+
+industrial = false
+
+rarity = 1.0
+fullyModdedOffset = Vector2(-0.25, -7.29999923706055)
+fullyModdedScale = 0.5
+magazineOffset = 0.25
+magazineOpticOffset = -7.29999923706055
+magazineOpticScale = 0.5
+magazineScale = 0.5
+magazineSuppressorOffset = Vector2(-0.25, 0.25)
+magazineSuppressorScale = 0.5
+opticOffset = -7.29999923706055
+opticScale = 0.5
+opticSuppressorOffset = Vector2(-0.25, -7.29999923706055)
+opticSuppressorScale = 0.5
+suppressorOffset = -0.25
+suppressorScale = 0.5

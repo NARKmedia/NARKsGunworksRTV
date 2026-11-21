@@ -110,6 +110,7 @@ func _ready():
  dynamicHammer = false
  selectorIndex = 0
  super._ready()
+ _vm_setup_ammo_check(model)
  var sight_rule=_vm_config.get("optic_sights",{})
  if sight_rule.get("enabled",false) and not sight_rule.get("parts",[]).is_empty():
   _vm_sights=load("res://NARK_Firearms/OpticSights.gd").new()
@@ -289,3 +290,25 @@ func Insert():
    await get_tree().create_timer(0.1, false).timeout;
    animator["parameters/conditions/Insert"] = false
    slotData.amount += 1
+
+func _vm_setup_ammo_check(model: Node3D):
+ var rules=_vm_config.get("ammo_check_sockets",{})
+ if rules.is_empty():return
+ var existing=[]
+ for node in find_children("*","Node",true,false):
+  var script=node.get_script()
+  if script!=null and script.resource_path=="res://Scripts/UIPosition.gd":existing.append(node)
+ for id in ["magazine","chamber"]:
+  var rule=rules.get(id,{})
+  if not rule.get("enabled",false):continue
+  var sk=model.get_node_or_null(str(rule.role)+"Rig/Skeleton3D") as Skeleton3D
+  if sk==null:continue
+  var index=sk.find_bone(str(rule.bone))
+  if index<0:continue
+  var type_id=0 if id=="magazine" else 1
+  for node in existing:
+   if int(node.get("type"))==type_id:node.set_physics_process(false)
+  var anchor=BoneAttachment3D.new()
+  anchor.name="AmmoCheck_"+id;anchor.bone_idx=index;anchor.bone_name=sk.get_bone_name(index);sk.add_child(anchor)
+  var marker=load("res://Scripts/UIPosition.gd").new()
+  marker.name="HUDPosition";marker.set("type",type_id);marker.position=_vm_vec(rule.p);anchor.add_child(marker)

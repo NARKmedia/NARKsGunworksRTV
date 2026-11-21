@@ -1,0 +1,15 @@
+[gd_scene format=3]
+[ext_resource type="Material" path="res://UI/Effects/MT_Item.tres" id="item"]
+[ext_resource type="Texture2D" path="res://NARK_StoegerCoach/Assets/Icon.res" id="icon"]
+[ext_resource type="PackedScene" path="res://Items/Attachments/Micro/Micro_1x1.tscn" id="overlay_1"]
+
+[node name="NARK_StoegerCoach" type="Sprite2D"]
+material = ExtResource("item")
+texture = ExtResource("icon")
+
+[node name="Micro" parent="." instance=ExtResource("overlay_1")]
+visible = false
+position = Vector2(55.4, -81.6)
+scale = Vector2(0.6, 0.6)
+rotation = 0.0
+show_behind_parent = true
