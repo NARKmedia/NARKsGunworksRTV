@@ -131,6 +131,8 @@ func _vm_vec(value) -> Vector3:
  return Vector3(value[0], value[1], value[2])
 
 func _physics_process(delta):
+ # VosTac replaces the vanilla physics body, including this state refresh.
+ if _vm_vostac!=null:currentState=animator.get("parameters/playback").get_current_node()
  super._physics_process(delta)
  if gameData.freeze or gameData.isCaching or gameData.isPlacing or gameData.isDrawing:return
  if data.weaponAction=="Manual" and currentState=="Idle" and not gameData.isReloading and slotData.chamber and slotData.casing:

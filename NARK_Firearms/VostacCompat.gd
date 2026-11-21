@@ -31,6 +31,7 @@ func _on_rig_update(_animate:bool):
   _basis=handling._vm_ads_basis()
   _rotate=handling.ads_rotation!=Vector3.ZERO
  rig.UpdateAimOffset()
+ _configure_break_action(rig)
 
 func _on_handling(_delta:float):
  if _rig==null or _handling==null or _config.gated() or _config.locked():return
@@ -47,3 +48,24 @@ func _on_handling(_delta:float):
   handling.targetPosition.y=-rig.aimOffset
  handling.targetPosition+=_position
  if _rotate:handling.targetRotation=(_basis*Basis.from_euler(handling.targetRotation*PI/180.0)).get_euler()*180.0/PI
+
+func _configure_break_action(rig):
+ if not rig.has_method("_ba_control_open") or not rig.get("_ba_ready"):return
+ if rig.get_node_or_null("GunworksVostacBreakAction")!=null:return
+ var manual=rig.get_node_or_null("Likho_WeaponRig_ManualReload")
+ var reload=rig.get_node_or_null("Likho_WeaponRig_Reload")
+ # Only take ownership of the known handlers on this one live rig.
+ if not _handler_matches(manual,"WeaponRig_ManualReload.gd") or not _handler_matches(reload,"WeaponRig_Reload.gd") or not reload.has_method("_do_reload"):return
+ var bridge=load("res://NARK_Firearms/VostacBreakAction.gd").new()
+ bridge.name="GunworksVostacBreakAction"
+ bridge.configure(rig,_config,reload)
+ rig.add_child(bridge)
+ for handler in [manual,reload]:
+  handler.set_process_input(false)
+  handler.set_process(false)
+  handler.set_physics_process(false)
+
+func _handler_matches(node,filename: String) -> bool:
+ if node==null:return false
+ var script=node.get_script()
+ return script!=null and script.resource_path=="res://mods/likhos-vostac/Scripts/Nodes/"+filename

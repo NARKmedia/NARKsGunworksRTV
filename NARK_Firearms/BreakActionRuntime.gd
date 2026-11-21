@@ -122,13 +122,9 @@ func Insert():
  if slotData.state=="Jammed":return
  if Input.is_action_just_pressed("prepare"):
   if currentState==&"Idle" and not _ba_open:
-   _ba_open=true
-   gameData.isInserting=true
-   PlayInsertStart()
-   _ba_playback.start(OPEN)
+   _ba_start_open()
   elif currentState==HOLD:
-   PlayInsertEnd()
-   _ba_playback.start(CLOSE)
+   _ba_start_close()
   return
  if currentState==HOLD and Input.is_action_just_pressed("insert"):_ba_request_insert()
 
@@ -223,3 +219,32 @@ func _ba_emit(point:Node3D):
 
 func _ba_update_inventory():
  if weaponSlot!=null and weaponSlot.get_child_count()>0:weaponSlot.get_child(0).UpdateDetails()
+
+# Input adapters request actions here; shell and ammo changes remain cue-driven.
+func _ba_start_open():
+ _ba_open=true
+ gameData.isInserting=true
+ PlayInsertStart()
+ _ba_playback.start(OPEN)
+
+func _ba_start_close():
+ PlayInsertEnd()
+ _ba_playback.start(CLOSE)
+
+func _ba_controls_blocked() -> bool:
+ return not _ba_ready or gameData.freeze or gameData.isCaching or gameData.isPlacing or gameData.isDrawing or gameData.isOccupied or gameData.isInspecting or gameData.isChecking or gameData.isReloading or gameData.isFiring or gameData.isClearing or slotData.state=="Jammed"
+
+func _ba_control_open() -> bool:
+ if _ba_controls_blocked() or _ba_open or _ba_playback.get_current_node()!=&"Idle":return false
+ _ba_start_open()
+ return true
+
+func _ba_control_close() -> bool:
+ if _ba_controls_blocked() or not _ba_open or _ba_active>=0 or _ba_playback.get_current_node()!=HOLD:return false
+ _ba_start_close()
+ return true
+
+func _ba_control_insert() -> bool:
+ if _ba_controls_blocked() or not _ba_open or _ba_playback.get_current_node()!=HOLD:return false
+ _ba_request_insert()
+ return _ba_active>=0

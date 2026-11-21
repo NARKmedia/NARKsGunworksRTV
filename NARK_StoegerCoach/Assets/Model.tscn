@@ -1,27 +1,27 @@
 [gd_scene format=3]
 
-[ext_resource type="ArrayMesh" path="res://NARK_StoegerCoach/Assets/Arms.mesh" id="1_1x1f6"]
-[ext_resource type="ArrayMesh" path="res://NARK_StoegerCoach/Assets/Weapon.mesh" id="2_hdeo7"]
-[ext_resource type="ArrayMesh" path="res://NARK_StoegerCoach/Assets/Ammo1.mesh" id="3_fpthd"]
-[ext_resource type="ArrayMesh" path="res://NARK_StoegerCoach/Assets/AmmoSpent1.mesh" id="4_wjtmt"]
-[ext_resource type="ArrayMesh" path="res://NARK_StoegerCoach/Assets/Ammo2.mesh" id="5_xq063"]
-[ext_resource type="ArrayMesh" path="res://NARK_StoegerCoach/Assets/AmmoSpent2.mesh" id="6_4xb0f"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Ammo_Check.res" id="7_2yjfy"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Barrel1_Insert_Empty.res" id="8_vsvie"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Barrel1_Insert_Spent.res" id="9_ide6l"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Barrel2_Insert_Empty.res" id="10_5s88o"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Barrel2_Insert_Spent.res" id="11_42r7g"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Idle.res" id="12_tpbx2"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Insert_End.res" id="13_qwdnl"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Insert_Idle.res" id="14_wgta6"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Insert_Start.res" id="15_tq265"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Inspect_Back.res" id="16_gen76"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Inspect_Back_Idle.res" id="17_qhms1"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Inspect_Back_Return.res" id="18_jg1hy"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Inspect_Front.res" id="19_3mn2i"]
-[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Inspect_Front_Idle.res" id="20_rgsbk"]
+[ext_resource type="ArrayMesh" path="res://NARK_StoegerCoach/Assets/Arms.mesh" id="1_8tkt1"]
+[ext_resource type="ArrayMesh" path="res://NARK_StoegerCoach/Assets/Weapon.mesh" id="2_a2kit"]
+[ext_resource type="ArrayMesh" path="res://NARK_StoegerCoach/Assets/Ammo1.mesh" id="3_jj0we"]
+[ext_resource type="ArrayMesh" path="res://NARK_StoegerCoach/Assets/AmmoSpent1.mesh" id="4_aneld"]
+[ext_resource type="ArrayMesh" path="res://NARK_StoegerCoach/Assets/Ammo2.mesh" id="5_5hvv8"]
+[ext_resource type="ArrayMesh" path="res://NARK_StoegerCoach/Assets/AmmoSpent2.mesh" id="6_42hrs"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Ammo_Check.res" id="7_ueavm"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Barrel1_Insert_Empty.res" id="8_hw8jm"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Barrel1_Insert_Spent.res" id="9_p51ct"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Barrel2_Insert_Empty.res" id="10_nnhrf"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Barrel2_Insert_Spent.res" id="11_0w0rd"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Idle.res" id="12_3h12x"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Insert_End.res" id="13_3l0k6"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Insert_Idle.res" id="14_lmvca"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Insert_Start.res" id="15_5rxjt"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Inspect_Back.res" id="16_jllfy"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Inspect_Back_Idle.res" id="17_m1w7e"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Inspect_Back_Return.res" id="18_al78d"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Inspect_Front.res" id="19_gg74u"]
+[ext_resource type="Animation" path="res://NARK_StoegerCoach/Assets/Inspect_Front_Idle.res" id="20_cu70r"]
 
-[sub_resource type="Skin" id="Skin_y0f24"]
+[sub_resource type="Skin" id="Skin_vsdva"]
 resource_name = "Skin"
 bind_count = 51
 bind/0/name = &""
@@ -178,7 +178,7 @@ bind/50/name = &""
 bind/50/bone = 50
 bind/50/pose = Transform3D(-0.01, 3.8941437e-09, -6.584767e-16, 3.894144e-09, 0.010000001, -1.6858741e-09, 1.9731322e-18, -1.6858741e-09, -0.010000001, 0.0021068286, -0.0002912825, -4.33541e-19)
 
-[sub_resource type="Skin" id="Skin_lby8p"]
+[sub_resource type="Skin" id="Skin_o1076"]
 resource_name = "Skin2"
 bind_count = 8
 bind/0/name = &""
@@ -206,7 +206,7 @@ bind/7/name = &""
 bind/7/bone = 7
 bind/7/pose = Transform3D(-0.01, 1.2246468e-18, -1.2246468e-18, 1.2246468e-18, 0.01, 6.123233e-19, 1.2246469e-18, 6.1232334e-19, -0.010000001, -3.2342617e-21, -0.00041199874, 0.00015970119)
 
-[sub_resource type="Skin" id="Skin_k6ytr"]
+[sub_resource type="Skin" id="Skin_wk4un"]
 resource_name = "Skin3"
 bind_count = 2
 bind/0/name = &""
@@ -216,30 +216,30 @@ bind/1/name = &""
 bind/1/bone = 1
 bind/1/pose = Transform3D(-0.01, 1.2246468e-18, -1.2246468e-18, 1.2246468e-18, 0.01, 6.123224e-19, 1.2246468e-18, 6.123224e-19, -0.01, 0, 0, 0)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_nhj83"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ue3o8"]
 _data = {
-&"Ammo_Check": ExtResource("7_2yjfy"),
-&"Barrel1_Insert_Empty": ExtResource("8_vsvie"),
-&"Barrel1_Insert_Spent": ExtResource("9_ide6l"),
-&"Barrel2_Insert_Empty": ExtResource("10_5s88o"),
-&"Barrel2_Insert_Spent": ExtResource("11_42r7g"),
-&"Idle": ExtResource("12_tpbx2"),
-&"Insert_End": ExtResource("13_qwdnl"),
-&"Insert_Idle": ExtResource("14_wgta6"),
-&"Insert_Start": ExtResource("15_tq265"),
-&"Inspect_Back": ExtResource("16_gen76"),
-&"Inspect_Back_Idle": ExtResource("17_qhms1"),
-&"Inspect_Back_Return": ExtResource("18_jg1hy"),
-&"Inspect_Front": ExtResource("19_3mn2i"),
-&"Inspect_Front_Idle": ExtResource("20_rgsbk")
+&"Ammo_Check": ExtResource("7_ueavm"),
+&"Barrel1_Insert_Empty": ExtResource("8_hw8jm"),
+&"Barrel1_Insert_Spent": ExtResource("9_p51ct"),
+&"Barrel2_Insert_Empty": ExtResource("10_nnhrf"),
+&"Barrel2_Insert_Spent": ExtResource("11_0w0rd"),
+&"Idle": ExtResource("12_3h12x"),
+&"Insert_End": ExtResource("13_3l0k6"),
+&"Insert_Idle": ExtResource("14_lmvca"),
+&"Insert_Start": ExtResource("15_5rxjt"),
+&"Inspect_Back": ExtResource("16_jllfy"),
+&"Inspect_Back_Idle": ExtResource("17_m1w7e"),
+&"Inspect_Back_Return": ExtResource("18_al78d"),
+&"Inspect_Front": ExtResource("19_gg74u"),
+&"Inspect_Front_Idle": ExtResource("20_cu70r")
 }
 
-[node name="@Node3D@2" type="Node3D" unique_id=1796733172]
+[node name="@Node3D@2" type="Node3D" unique_id=1664270789]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12)
 
-[node name="ArmsRig" type="Node3D" parent="." unique_id=1679149777]
+[node name="ArmsRig" type="Node3D" parent="." unique_id=1171471734]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="ArmsRig" unique_id=446778523]
+[node name="Skeleton3D" type="Skeleton3D" parent="ArmsRig" unique_id=1814099364]
 bones/0/name = "NARK_Root"
 bones/0/parent = -1
 bones/0/rest = Transform3D(100, 0, 0, 0, 1.7881393e-05, -99.99999, 0, 99.99999, 1.7881393e-05, 0, 0, 0)
@@ -598,16 +598,16 @@ bones/50/position = Vector3(0.0021068286, 7.998849e-27, -0.00029128167)
 bones/50/rotation = Quaternion(-1.8831395e-07, -0.7071068, 0.7071067, -1.8831395e-07)
 bones/50/scale = Vector3(1, 1, 1)
 
-[node name="Arms" type="MeshInstance3D" parent="ArmsRig/Skeleton3D" unique_id=495839634]
+[node name="Arms" type="MeshInstance3D" parent="ArmsRig/Skeleton3D" unique_id=174930857]
 layers = 2
 cast_shadow = 0
-mesh = ExtResource("1_1x1f6")
-skin = SubResource("Skin_y0f24")
+mesh = ExtResource("1_8tkt1")
+skin = SubResource("Skin_vsdva")
 skeleton = NodePath("..")
 
-[node name="WeaponRig" type="Node3D" parent="." unique_id=1293420063]
+[node name="WeaponRig" type="Node3D" parent="." unique_id=1909684681]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="WeaponRig" unique_id=524207312]
+[node name="Skeleton3D" type="Skeleton3D" parent="WeaponRig" unique_id=896967515]
 bones/0/name = "bone_nvm_stoeger_frame"
 bones/0/parent = -1
 bones/0/rest = Transform3D(-100, 1.2246468e-14, 1.2246468e-14, 1.2246468e-14, 100, 6.123233e-15, -1.2246468e-14, 6.123233e-15, -100, -3.8628495e-18, 0.017396728, -0.00080915005)
@@ -665,16 +665,16 @@ bones/7/position = Vector3(-5.7690006e-20, 0.00023803147, -0.00016779266)
 bones/7/rotation = Quaternion(7.096167e-33, -5.347674e-33, -7.181949e-33, 1)
 bones/7/scale = Vector3(1, 1, 0.99999994)
 
-[node name="Weapon" type="MeshInstance3D" parent="WeaponRig/Skeleton3D" unique_id=930125612]
+[node name="Weapon" type="MeshInstance3D" parent="WeaponRig/Skeleton3D" unique_id=1587259987]
 layers = 2
 cast_shadow = 0
-mesh = ExtResource("2_hdeo7")
-skin = SubResource("Skin_lby8p")
+mesh = ExtResource("2_a2kit")
+skin = SubResource("Skin_o1076")
 skeleton = NodePath("..")
 
-[node name="Ammo1Rig" type="Node3D" parent="." unique_id=530077689]
+[node name="Ammo1Rig" type="Node3D" parent="." unique_id=963511215]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="Ammo1Rig" unique_id=426035687]
+[node name="Skeleton3D" type="Skeleton3D" parent="Ammo1Rig" unique_id=1029020211]
 bones/0/name = "Armature-shell-loaded"
 bones/0/parent = -1
 bones/0/rest = Transform3D(100, 0, 0, 0, 100, 1.6292068e-05, 0, -1.6292068e-05, 100, 0, 0, 0)
@@ -690,16 +690,16 @@ bones/1/position = Vector3(0, 0, 0)
 bones/1/rotation = Quaternion(6.123234e-17, 1, 8.146034e-08, 6.1232336e-17)
 bones/1/scale = Vector3(1, 1, 1)
 
-[node name="Ammo1" type="MeshInstance3D" parent="Ammo1Rig/Skeleton3D" unique_id=1956799941]
+[node name="Ammo1" type="MeshInstance3D" parent="Ammo1Rig/Skeleton3D" unique_id=1418512100]
 layers = 2
 cast_shadow = 0
-mesh = ExtResource("3_fpthd")
-skin = SubResource("Skin_k6ytr")
+mesh = ExtResource("3_jj0we")
+skin = SubResource("Skin_wk4un")
 skeleton = NodePath("..")
 
-[node name="AmmoSpent1Rig" type="Node3D" parent="." unique_id=2146405118]
+[node name="AmmoSpent1Rig" type="Node3D" parent="." unique_id=78707891]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="AmmoSpent1Rig" unique_id=857767096]
+[node name="Skeleton3D" type="Skeleton3D" parent="AmmoSpent1Rig" unique_id=1336254235]
 bones/0/name = "Armature_stoeger_shell_spent"
 bones/0/parent = -1
 bones/0/rest = Transform3D(100, 0, 0, 0, 100, 1.6292068e-05, 0, -1.6292068e-05, 100, 0, 0, 0)
@@ -715,16 +715,16 @@ bones/1/position = Vector3(0, 0, 0)
 bones/1/rotation = Quaternion(6.123234e-17, 1, 8.146034e-08, 6.1232336e-17)
 bones/1/scale = Vector3(1, 1, 1)
 
-[node name="AmmoSpent1" type="MeshInstance3D" parent="AmmoSpent1Rig/Skeleton3D" unique_id=983895473]
+[node name="AmmoSpent1" type="MeshInstance3D" parent="AmmoSpent1Rig/Skeleton3D" unique_id=1229985095]
 layers = 2
 cast_shadow = 0
-mesh = ExtResource("4_wjtmt")
-skin = SubResource("Skin_k6ytr")
+mesh = ExtResource("4_aneld")
+skin = SubResource("Skin_wk4un")
 skeleton = NodePath("..")
 
-[node name="Ammo2Rig" type="Node3D" parent="." unique_id=1910071372]
+[node name="Ammo2Rig" type="Node3D" parent="." unique_id=629803650]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="Ammo2Rig" unique_id=1032038928]
+[node name="Skeleton3D" type="Skeleton3D" parent="Ammo2Rig" unique_id=1935725573]
 bones/0/name = "Armature-shell-loaded"
 bones/0/parent = -1
 bones/0/rest = Transform3D(100, 0, 0, 0, 100, 1.6292068e-05, 0, -1.6292068e-05, 100, 0, 0, 0)
@@ -740,16 +740,16 @@ bones/1/position = Vector3(0, 0, 0)
 bones/1/rotation = Quaternion(6.123234e-17, 1, 8.146034e-08, 6.1232336e-17)
 bones/1/scale = Vector3(1, 1, 1)
 
-[node name="Ammo2" type="MeshInstance3D" parent="Ammo2Rig/Skeleton3D" unique_id=1173990782]
+[node name="Ammo2" type="MeshInstance3D" parent="Ammo2Rig/Skeleton3D" unique_id=134815821]
 layers = 2
 cast_shadow = 0
-mesh = ExtResource("5_xq063")
-skin = SubResource("Skin_k6ytr")
+mesh = ExtResource("5_5hvv8")
+skin = SubResource("Skin_wk4un")
 skeleton = NodePath("..")
 
-[node name="AmmoSpent2Rig" type="Node3D" parent="." unique_id=1988218056]
+[node name="AmmoSpent2Rig" type="Node3D" parent="." unique_id=1254143621]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="AmmoSpent2Rig" unique_id=529957528]
+[node name="Skeleton3D" type="Skeleton3D" parent="AmmoSpent2Rig" unique_id=224608602]
 bones/0/name = "Armature_stoeger_shell_spent"
 bones/0/parent = -1
 bones/0/rest = Transform3D(100, 0, 0, 0, 100, 1.6292068e-05, 0, -1.6292068e-05, 100, 0, 0, 0)
@@ -765,13 +765,13 @@ bones/1/position = Vector3(0, 0, 0)
 bones/1/rotation = Quaternion(6.123234e-17, 1, 8.146034e-08, 6.1232336e-17)
 bones/1/scale = Vector3(1, 1, 1)
 
-[node name="AmmoSpent2" type="MeshInstance3D" parent="AmmoSpent2Rig/Skeleton3D" unique_id=143914765]
+[node name="AmmoSpent2" type="MeshInstance3D" parent="AmmoSpent2Rig/Skeleton3D" unique_id=68045022]
 layers = 2
 cast_shadow = 0
-mesh = ExtResource("6_4xb0f")
-skin = SubResource("Skin_k6ytr")
+mesh = ExtResource("6_42hrs")
+skin = SubResource("Skin_wk4un")
 skeleton = NodePath("..")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1340360400]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1028786237]
 callback_mode_process = 2
-libraries/ = SubResource("AnimationLibrary_nhj83")
+libraries/ = SubResource("AnimationLibrary_ue3o8")
